@@ -1,0 +1,36 @@
+.prev, .next
+  +inline-flex(center, center)
+  width: 1em
+  height: 1em
+  font-size: rem(35)
+  border: 1px solid currentColor
+  +before
+    +icon-arrow(.3, .3, .07, currentColor, 45, em)
+    display: block
+    margin-left: .1em
+
+.next
+  transform: scaleX(-1)
+
+.slider
+  &__wrap
+    position: relative
+    *
+      box-sizing: border-box
+  &__controls
+    position: absolute
+    z-index: 2
+    left: 50%
+    top: 50%
+    transform: translate(-50%,  0)
+    width: 100%
+    max-width:  $container-max-width - ($container-padding-static * 2)
+  &__prev, &__next
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+  &__prev
+    left: 0
+  &__next
+    right: 0
+    transform: translate(0, -50%) scaleX(-1)

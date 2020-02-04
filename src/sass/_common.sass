@@ -1,10 +1,9 @@
 html  
   font-size: $fz
+  font-weight: 300
   line-height: 1.4
   color: $c-text
   +reg
-  +sm
-    font-size: $fz-sm-px
 
 body
   background-color: $white  
@@ -20,4 +19,12 @@ body
   $this: &
   &--loaded:not(#{$this}--no-fade-in)
     animation: fadeIn 1s
+
+
+.out
+  padding-top: $header-height
+
+.logo
+  display: inline-block
+  font-size: 0
     

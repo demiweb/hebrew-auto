@@ -1,0 +1,30 @@
+.btn
+  $this: &
+  display: inline-block
+  background-color: $accent
+  border: 1px solid $accent
+  color: $white
+  font-weight: 700
+  font-size: em(18)
+  min-width: 230px
+  padding: .5em 1em
+  text-align: center
+  +tr(color .3s, background-color .3s, border-color .3s)
+  +hover
+    &:not(#{$this}--no-hover)
+      background-color: transparent
+      color: $accent
+
+  +xs
+    min-width: 0
+    width: 100%
+
+  &--dark
+    background-color: $c-text
+    border-color: $c-text
+    +hover
+      &:not(#{$this}--no-hover)
+        color: $c-text
+  &--full
+    min-width: 0
+    width: 100%

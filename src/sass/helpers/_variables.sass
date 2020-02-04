@@ -7,11 +7,23 @@ $fz-xs:    em(12)
 $text-inputs: "[type='color']", "[type='date']", "[type='datetime']", "[type='datetime-local']", "[type='email']", "[type='month']", "[type='number']", "[type='password']", "[type='search']", "[type='tel']", "[type='text']", "[type='time']", "[type='url']", "[type='week']", "input:not([type])", "textarea"
 $check-inputs: "[type='checkbox']", "[type='radio']"
 
-$c-text: #000
+// colors
+$c-text:        #3a3a3a
 
-$black: #000
-$white: #fff
+$black:         #000
+$white:         #fff
+
+$accent:        #ffb32a
+
+$gray:          #636363
+$gray-lightest: #f7f7f7
 
 =windowHeight($offset: 0px)
   height: calc(100vh - #{$offset})
   height: calc((var(--vh, 1vh) * 100) - #{$offset})
+
+// header heights
+$header-top-height:    rem(43)
+$header-bottom-height: rem(100)
+
+$header-height:        $header-top-height + $header-bottom-height

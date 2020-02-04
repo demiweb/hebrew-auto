@@ -1,0 +1,11 @@
+.nav
+  li
+    display: inline-block
+    +notlast
+      margin-right: 1rem
+  a
+    +tr(color .3s)
+    +hover
+      color: $accent
+  &__item-current
+    color: $accent

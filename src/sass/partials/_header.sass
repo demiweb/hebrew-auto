@@ -1,0 +1,58 @@
+.header
+  $this: &
+  position: fixed
+  z-index: 10
+  left: 0
+  right: 0
+  top: 0
+  &__top
+    background-color: $white
+    
+  &__bottom
+    background-color: $gray-lightest
+  &__inner
+    +flex(flex-start, center)
+    padding-top: rem(8)
+    padding-bottom: rem(8)
+    #{$this}__top &
+      height: $header-top-height
+    #{$this}__bottom &
+      height: $header-bottom-height
+  &__nav
+    flex-grow: 1
+  &__contacts
+    +flex(flex-start, center)
+    flex-grow: 1
+  &__contact
+    +notlast
+      margin-left: rem(100)
+  &__social
+    margin-right: rem(50)
+  &__logos
+    font-size: 0
+    img
+      display: inline-block
+      margin-left: rem(7)
+      margin-right: rem(7)
+  &__logo
+    margin-left: rem(70)
+
+
+.header-contact
+  +flex(flex-start, center)
+  &__text
+    +notlast
+      margin-left: em(10)
+  &__link
+    font-weight: 400
+  &__icon
+    background-color: $accent
+    width: rem(27)
+    height: rem(27)
+    flex: 0 0 rem(27)
+    border-radius: 50%
+    margin-left: rem(10)
+    font-size: 0
+    +flex(center, center)
+    .icon
+      font-size: 1rem

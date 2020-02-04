@@ -1,4 +1,4 @@
-ProjectTitle: template
+ProjectTitle: hebrew-auto
 
 PageList:
-- file: page.html
+- file: home.html
