@@ -1,5 +1,82 @@
+{%set
+navs = [
+  {
+    title: 'שרותי המוסך',
+    list: [
+      { link: 'יפולים תקופתיים' , modItem: 'nav__item-current' },
+      { link: 'יקוני מכונאות' },
+      { link: 'יבחון ממוחשב לתקלות' },
+      { link: 'יקוני חשמל לרכב' },
+      { link: 'יקוני מיזוג אויר' },
+      { link: 'דיקה לפני קנייה של רכב' }
+    ]
+  },
+  {
+    title: 'תחזוקה',
+    list: [
+      { link: 'טיפים / מידע' },
+      { link: 'צמיגים' },
+      { link: 'בדיקת חורף' },
+      { link: 'בדיקת קיץ' },
+      { link: 'סרטונים עם הסברים' }
+    ]
+  },
+  {
+    title: 'תיקוני פחחות וצבע',
+    list: [
+      { link: 'הפחחות כללית לרכב' },
+      { link: 'תיקוני צבע לרכב' },
+      { link: 'פחחות וצבע לאחר תאונה' },
+      { link: 'בדיקה לפני קניה של רכב' }
+    ]
+  },
+  {
+    title: 'צרו קשר',
+    list: [
+      { link: 'הכנה לרישוי שנתי' },
+      { link: 'העברת רישוי שנתי' },
+      { link: 'איסוף והחזרת הרכב לטיפולים' },
+      { link: 'הכנת רכב למכירה' }
+    ]
+  }
+]
+%}
+
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <div class="container">
+
+    <div class="grid grid--no-bottom-gap-all">
+      {% for i in navs %}
+      <div class="col col--2">
+        <div class="footer__right">
+          <h5 class="footer__title title title--h5">{{ i.title | safe }}</h5>
+
+          {{ mixins.list(
+            name = 'nav',
+            hasWrap = true,
+            modifications = { wrap: 'nav--footer', item: '', link: '' },
+            list = i.list
+          ) }}
+        </div>
+      </div>
+      {% endfor %}
+
+      <div class="col col--3">
+        <div class="footer__left">
+          <a href="/" class="footer__logo logo">
+            <img class="js-lazy" alt="" src="" data-src="./img/logo.png"/>
+          </a>
+
+          <div class="footer__copy">© Copyright - מרכז שירות תלפיות 1936 </div>
+
+          {{ mixins.btn(
+            title = 'לקביעת תור',
+            mod = 'footer__btn'
+          ) }}
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 <!-- end footer -->

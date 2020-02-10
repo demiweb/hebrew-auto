@@ -34,3 +34,21 @@
   &__next
     right: 0
     transform: translate(0, -50%) scaleX(-1)
+  &__pagination
+    text-align: center
+    position: absolute
+    z-index: 1
+    width: 100%
+    left: 0
+    bottom: rem(30)
+    .swiper-pagination-bullet
+      display: inline-block
+      width: rem(14)
+      height: rem(14)
+      background-color: $white
+      border-radius: 50%
+      cursor: pointer
+      margin-left: rem(2)
+      margin-right: rem(2)
+      &.swiper-pagination-bullet-active
+        background-color: $accent

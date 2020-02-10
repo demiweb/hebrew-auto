@@ -1,0 +1,44 @@
+{%set
+form = {
+  mod: 's-call__form',
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'שם'
+    },
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'טלפון'
+    },
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'דואר אלקטרוני'
+    }
+  ]
+}
+%}
+
+<!-- begin section -->
+<div class="s-call js-lazy" data-background-image="./img/bg-call.jpg">
+  <div class="container">
+    <div class="grid grid--no-bottom-gap-all">
+      <div class="col col--6">
+        <div class="s-call__content">
+          <h2 class="title title--h2">במה נוכל לעזור לך היום?</h2>
+
+          <div class="section__subttl">אנא השאר את פר טי הקשר שלך ונחזור אליך בקרוב</div>
+
+          {% include "partials/_form.html" %}
+        </div>
+      </div>
+
+      <div class="col col--6">
+        <img class="s-call__img js-lazy" alt="" src="" data-src="./img/people/2.png"/>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end section -->

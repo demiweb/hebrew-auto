@@ -1,0 +1,26 @@
+
+
+<!-- begin form -->
+<form class="form{% if form.mod %} {{ form.mod }}{% endif %}">
+  {% for i in form.fields %}
+  <div class="form__field">
+    {{ mixins.input(
+      name = i.name,
+      mod = '',
+      type = i.type,
+      placeholder = i.placeholder,
+      value = '',
+      fieldClass = ''
+    ) }}
+  </div>
+  {% endfor %}
+
+  <div class="form__field form__btn">
+    {{ mixins.btn(
+      title = 'צרו קשר',
+      mod = '',
+      href = false
+    ) }}
+  </div>
+</form>
+<!-- end form -->

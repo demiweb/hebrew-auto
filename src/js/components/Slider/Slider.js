@@ -10,11 +10,16 @@ export default class Slider {
   }
 
   _getOptions() {
-    this.getOptions = ({ navigation, onInit }) => ({
+    this.getOptions = ({ navigation, pagination, onInit }) => ({
       hero: {
         slidesPerView: 1,
         grabCursor: true,
         navigation,
+        pagination: {
+          el: pagination,
+          type: 'bullets',
+          clickable: true,
+        },
         on: {
           init: onInit,
         },

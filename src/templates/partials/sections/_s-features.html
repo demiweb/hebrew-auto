@@ -1,0 +1,51 @@
+{%set
+features = [
+  {
+    icon: 'worker',
+    title: 'אנחנו עובדים מהר',
+    text: 'לא תצטרך לחכות לנצח, כי המומחים שלנו מנוסים מאוד'
+  },
+  {
+    icon: 'car-wash',
+    title: 'מבצעים ושירותים',
+    text: 'טיפול לרכב במבצע במוסך תלפיות חיפה !! 15% הנחה על העבודה,'
+  },
+  {
+    icon: 'wrench',
+    title: 'טיפים לתחזוקה שוטפת',
+    text: 'מבצע חורף- בדיקת רכב לחורף בחינם! לבטיחות ברכב תקין ובתנאים משתנים'
+  },
+  {
+    icon: 'review',
+    title: 'לקוחות ממליצים',
+    text: '"מוסך 10! לגמרי מרוצה מהמוסך ומהשירותים. מוסך מאד אמין ברמת המחירים, ברמת הטיפול, ברמת היחס"'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pb-0">
+  <div class="container">
+    <h2 class="section__title title">
+      למה לבחור בנו
+    </h2>
+
+    <div class="grid">
+      {% for i in features %}
+      <div class="col col--3">
+        <!-- begin feature -->
+        <div class="feature">
+          <div class="feature__icon">
+            {{ mixins.icon(i.icon) }}
+          </div>
+
+          <h3 class="feature__title title title--h3">{{ i.title | safe }}</h3>
+
+          <div class="feature__text">{{ i.text | safe }}</div>
+        </div>
+        <!-- end feature -->
+      </div>
+      {% endfor %}
+    </div>    
+</section>
+<!-- end section -->

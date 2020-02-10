@@ -1,0 +1,63 @@
+{%set
+items = [
+  {
+    icon: 'repair',
+    text: 'טיפולים ותיקונים לרכב במסגרת אחריות היבואן רנו וניסאן – ללא עלות ללקוח.'
+  },
+  {
+    icon: 'tow',
+    text: 'שינוע הרכב ללקוחות מהבית/מקום העבודה וחזרה – בעלות של מאה שקל.עלות ללקוח.'
+  },
+  {
+    icon: 'snowflake',
+    text: 'מבצע חורף- בדיקת רכב לחורף בחינם! לבטיחות ברכב תקין ובתנאים משתנים'
+  },
+  {
+    icon: 'sheet',
+    text: 'הכנת הרכב והעברת מבחני רישוי רכב (טסטים)'
+  },
+  {
+    icon: 'gear',
+    text: 'שירותי בדיקת חורף – ללא תשלום'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--gray s-man-info-items pb-0">
+  <div class="container">
+    <div class="grid">
+
+      <div class="col col--8 col--no-bottom-gap">
+        <h3 class="section__title title title--h3">בנוסף לטיפולים השגרתיים, במוסך תלפיות יעמדו לרשותך גם שירותים ייחודיים נוספים:</h3>
+
+        <!-- begin info-items -->
+        <div class="info-items">
+          <div class="grid grid--justify-content-center">
+            {% for i in items %}
+            <div class="col col--4">
+              <!-- begin info-item -->
+              <div class="info-item">
+                <div class="info-item__icon">
+                  {{ mixins.icon(i.icon) }}
+                </div>
+
+                <div class="info-item__text">{{ i.text | safe }}</div>
+              </div>
+              <!-- end info-item -->
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- end info-items -->
+      </div>
+
+      <div class="col col--4 col--no-bottom-gap">
+        <div class="s-man-info-items__img">
+          <img class="js-lazy" alt="" src="" data-src="./img/people/1.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

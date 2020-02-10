@@ -3,7 +3,7 @@
   display: inline-block
   background-color: $accent
   border: 1px solid $accent
-  color: $white
+  // color: $white
   font-weight: 700
   font-size: em(18)
   min-width: 230px
@@ -22,9 +22,23 @@
   &--dark
     background-color: $c-text
     border-color: $c-text
+    color: $white
     +hover
       &:not(#{$this}--no-hover)
         color: $c-text
+  &--transp
+    background-color: transparent
+    color: $accent
+    +hover
+      &:not(#{$this}--no-hover)
+        color: $c-text
+        background-color: $accent
+  &--white
+    background-color: $white
+    border-color: $white
+    +hover
+      &:not(#{$this}--no-hover)
+        color: $white
   &--full
     min-width: 0
     width: 100%

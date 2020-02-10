@@ -1,0 +1,26 @@
+.footer
+  &__right, &__left    
+    padding-top: rem(50)
+    padding-bottom: rem(50)
+  &__title
+    margin-bottom: rem(15)
+    position: relative
+    padding-bottom: rem(8)
+    +before
+      position: absolute
+      z-index: 1
+      right: 0
+      bottom: 0
+      width: rem(45)
+      height: 1px
+      background-color: $accent
+  &__left
+    border-right: 1px solid  $gray-light
+    height: 100%
+    text-align: left
+  &__logo
+    margin-bottom: rem(20)
+  &__copy
+    margin-bottom: rem(30)
+    font-size: em(14)
+    color: #9d9d9d

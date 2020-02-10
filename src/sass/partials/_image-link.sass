@@ -1,0 +1,23 @@
+.image-link
+  display: block
+  +cover
+  position: relative
+  padding-top: 50%
+  padding-bottom: rem(30)
+  &__title
+    +inline-flex(center, center)
+    min-width: 50%
+    background-color: $accent
+    padding: rem(10) rem(25)
+    height: 2.65rem
+    position: relative
+    +before
+      +arr(2.65rem, 2.65rem, $accent, b)
+      position: absolute
+      right: 100%
+      top: 0
+      z-index: 0
+      transform: translate(50%, 0)
+  &__title-in
+    position: relative
+    z-index: 1

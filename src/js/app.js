@@ -11,6 +11,8 @@ import classNames from './classNames'
 import sayHello from './lib/sayHello'
 import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
+import setScrollbar from './components/setScrollbar'
+
 import Slider from './components/Slider/Slider'
 
 // import { NO_SCROLL } from './constants'
@@ -49,6 +51,7 @@ class App {
       sayHello,
       setHTMLClassNames,
       setLazy,
+      setScrollbar,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))

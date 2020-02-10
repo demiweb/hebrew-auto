@@ -13,12 +13,14 @@ export default class MySlider {
       prevEl: this.wrap.querySelector(`.${classNames.slider.prev}`),
       nextEl: this.wrap.querySelector(`.${classNames.slider.next}`),
     }
+    this.pagination = this.wrap.querySelector(`.${classNames.slider.pagination}`)
     this.slides = [...container.querySelectorAll(`.${classNames.slider.slide}`)]
 
     this.nameMod = undefined // if need to reinit slider with different options
 
     this.options = getOptions({
       navigation: this.navigation,
+      pagination: this.pagination,
       onInit: setLazy,
     })[this.nameMod || this.name]
   }

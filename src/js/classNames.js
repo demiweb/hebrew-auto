@@ -11,6 +11,7 @@ export default {
       prev: 'js-slider-prev',
       next: 'js-slider-next',
       slide: 'swiper-slide',
+      pagination: 'js-slider-pagination',
     },
     plugin: {
       container: 'swiper-container',
@@ -18,4 +19,5 @@ export default {
       activeSlide: 'swiper-slide-active',
     },
   },
+  scrollbar: 'js-scrollbar',
 }

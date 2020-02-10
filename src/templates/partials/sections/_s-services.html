@@ -1,0 +1,40 @@
+{%set
+services = [
+  { img: '7.jpg', title: 'טיפול חשמל לרכב' },
+  { img: '6.jpg', title: 'תיקוני פח ותאונות' },
+  { img: '5.jpg', title: 'ביצוע דיאגנוסטיקה ממוחשבת' },
+  { img: 'Talpiot _023.jpg', title: 'שרותי טיפולים ומכונאות' },  
+  { img: '8.jpg', title: ' טיפול והתקנת מיזוג אויר' }  
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">    
+    <h2 class="section__title title">
+      כאן תוכלו למצוא את כל מה שצריך
+    </h2>
+
+    <div class="grid grid--justify-content-center">
+      {% for i in services %}
+      <div class="col col--4">
+        <!-- begin image-link -->
+        <a href="#" class="image-link js-lazy" data-background-image="./img/services/{{ i.img }}">
+          <span class="image-link__title">
+            <span class="image-link__title-in">{{ i.title | safe }}</span>
+          </span>
+        </a>
+        <!-- end image-link -->
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="section__btn">
+      {{ mixins.btn(
+        title = 'לקביעת תור',
+        mod = 'btn--transp'
+      ) }}
+    </div>
+  </div>
+</section>
+<!-- end section -->
