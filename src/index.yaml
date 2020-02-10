@@ -3,3 +3,6 @@ ProjectTitle: hebrew-auto
 PageList:
 - file: home.html
 - file: tyres.html
+- file: services.html
+- file: 404.html
+- file: thanks.html

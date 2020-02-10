@@ -1,0 +1,35 @@
+<!-- begin section -->
+<section class="section{% if sServices.mod %} {{ sServices.mod }}{% endif %}">
+  <div class="container">
+    <div class="grid">
+      {% for i in range(0, 6) %}
+      <div class="col col--4">
+        <!-- begin descr-card -->
+        <div class="descr-card">
+          <div class="descr-card__img js-lazy" data-background-image="./img/services/5.jpg"></div>
+
+          <div class="descr-card__content">
+            <h3 class="descr-card__title title title--h3">
+              תיקוני צבע לרכב
+            </h3>
+
+            <div class="descr-card__text">
+              לרוב, לאחר תאונה של הרכב, מתגלה חשיבותו של מוסך טוב ואמין, אשר מסוגל להתמודד עם תיקונים קריטיים לבטיחות הנהג והנוסעים (כתיקוני שלדות) ולא רק תיקונים חיצוניים-קוסמטיים.
+למרות שמוסך תלפיות הינו מוסך מורשה לטיפול ברכבי רנו, ניסאן ודאצ'יה, אנחנו מספקים שירותי פחחות וצבע לאחר תאונה לכל סוגי הרכבים הקיימים כיום בישראל..
+            </div>
+
+            <div class="descr-card__btn">
+              {{ mixins.btn(
+                title = 'סדר',
+                mod = ''
+              ) }}
+            </div>
+          </div>
+        </div>
+        <!-- end descr-card -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

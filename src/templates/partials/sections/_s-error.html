@@ -1,0 +1,34 @@
+<!-- begin section -->
+<section class="section--white section-full js-lazy" data-background-image="./img/bg-error.jpg">
+  <div class="container">
+    <div class="section-full__inner">
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', list: 'section-full__breadcrumbs breadcrumbs', item: '', link: '' },
+        list = [
+          { link: 'דף הבית'  },
+          { item: '-' },
+          { item: '404', modItem: 'breadcrumbs__item-current' }
+        ]
+      ) }}
+
+      <div class="section-full__content">
+        <div class="section-full__block">
+          <div class="grid">
+            <div class="col col--3">
+              <h1 class="title title--xxl">404</h1>
+
+              <div class="section__subttl strong">לרוע המזל עמוד זה לא קיים</div>
+
+              {{ mixins.btn(
+                title = 'דף הבית',
+                mod = ''
+              ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

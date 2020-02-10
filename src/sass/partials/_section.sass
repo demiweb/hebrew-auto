@@ -16,5 +16,36 @@
   &__block
     margin-bottom: rem(30)
 
+
   &--gray
     background-color: $gray-lightest
+  &--white
+    color: $white
+
+.section-full  
+  +cover
+  background-color: $c-text
+  &__inner
+    // min-height: calc(100vh - #{$header-height})
+    +flex(flex-start, normal, column)
+    padding-top: rem(140)
+    padding-bottom: rem(140)
+    position: relative
+    z-index: 1
+  &__content
+    flex-grow: 1
+    +flex(center, normal, column)
+    position: relative
+    z-index: 1
+  &__icon
+    width: 1em
+    height: 1em
+    font-size: rem(60)
+    border-radius: 50%
+    border: 1px solid currentColor
+    +flex(center, center)
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: rem(15)
+    .icon
+      font-size: rem(20)
