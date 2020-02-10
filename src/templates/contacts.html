@@ -1,0 +1,23 @@
+---
+title: contacts
+page: contacts
+hero: {
+  title: 'צור קשר',
+  bg: 'Talpiot _073.jpg',
+  mod: 'hero--sm',
+  breadcrumbs: {
+    list: [
+      { link: 'דף הבית' },
+      { item: '-' },
+      { item: ' צור קשר', modItem: 'breadcrumbs__item-current' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-contacts.html" %}
+  {% include "partials/sections/_s-call.html" %}
+{% endblock %}

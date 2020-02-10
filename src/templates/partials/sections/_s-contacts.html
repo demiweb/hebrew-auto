@@ -1,0 +1,56 @@
+{%set
+contacts = [
+  {
+    icon: 'pin',
+    title: 'הכתובת',
+    text: 'דרך בר יהודה 147, 20300 נשר'
+  },
+  {
+    icon: 'telephone',
+    title: 'מספר טלפון',
+    text: 'טלפון : 077-9555648 פקס: 04-8202894 יעקב-יועץ שירות: 0534288815 שי- יועץ שירות : 0534288814'
+  },
+  {
+    icon: 'clock',
+    title: 'שעות פעילות',
+    text: "
+      <p>ימים א' – ה': 07:30 – 16:00</p>
+      <p>ימים ו': 07:30 – 12:00</p>
+    "
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid--align-items-center">
+      <div class="col col--7">
+        <!-- begin map -->
+        <div class="map">
+          <iframe class="js-lazy" src="" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.5280487149485!2d35.03677981549723!3d32.778255291228696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151dba82227ec80d%3A0x14bc22f8ed82a256!2zQmFyIFllaHVkYSBSb2FkIDE0NywgTmVzaGVyLCDQmNC30YDQsNC40LvRjA!5e0!3m2!1sru!2sua!4v1581346565640!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        <!-- end map -->
+      </div>
+
+      <div class="col col--5">
+        <!-- begin contacts -->
+        <div class="contacts">
+          {% for i in contacts %}
+          <div class="contacts__block contacts-block">
+            <div class="contacts-block__icon">
+              {{ mixins.icon(i.icon) }}
+            </div>
+
+            <h3 class="contacts-block__title title title--h3">{{ i.title | safe }}</h3>
+
+            <div class="contacts-block__text">{{ i.text | safe }}</div>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- end contacts -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->
