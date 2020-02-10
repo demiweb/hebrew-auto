@@ -1,0 +1,40 @@
+{%set
+numbers = [
+  {
+    title: '50',
+    text: 'טכנולוגיות מודרניות חדשות'
+  },
+  {
+    title: '100',
+    text: 'שנים משמחות בעלי מכוניות'
+  },
+  {
+    title: '35',
+    text: 'צוות מוסמך ומנוסה'
+  },
+  {
+    title: '+1000',
+    text: 'מכוניות משופצות'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section section--lg js-lazy" data-background-image="./img/about/Talpiot _100.jpg">
+  <div class="container">
+    <div class="grid">
+      {% for i in numbers %}
+      <div class="col col--3">
+        <!-- begin number-block -->
+        <div class="number-block">
+          <div class="number-block__title">{{ i.title | safe }}</div>
+
+          <div class="number-block__text">{{ i.text | safe }}</div>
+        </div>
+        <!-- end number-block -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

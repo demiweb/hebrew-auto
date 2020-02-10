@@ -1,0 +1,45 @@
+{%set
+team = [
+  { img: '17.jpg' },
+  { img: 'Talpiot _033.jpg' },
+  { img: 'Talpiot _097.jpg' },
+  { img: 'Talpiyot day 2_05 _.jpg' }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title title title--h2">הצוות שלנו</h2>
+
+    <!-- begin slider -->
+    <div class="slider__wrap slider--team__wrap">
+      <div class="swiper-container js-slider" data-slider="team">
+        <div class="swiper-wrapper slider slider--team">
+          {% for i in team %}
+          <div class="swiper-slide slide member">
+            <div class="member__img js-lazy" data-background-image="./img/about/{{ i.img }}"></div>
+
+            <div class="member__content">
+              <h3 class="member__title title title--h3 title--under">
+                אדם
+              </h3>
+
+              <div class="member__text">
+                מכונאי ראשי
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="slider__controls">
+        <button class="slider__prev slider-prev js-slider-prev"></button>
+        <button class="slider__next slider-next js-slider-next"></button>
+      </div>
+    </div>
+    <!-- end slider -->
+  </div>
+</section>
+<!-- end section -->

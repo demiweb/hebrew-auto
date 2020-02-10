@@ -1,0 +1,27 @@
+---
+title: about
+page: about
+hero: {
+  title: 'אודות',
+  bg: 'Talpiot _030.jpg',
+  mod: 'hero--sm',
+  breadcrumbs: {
+    list: [
+      { link: 'דף הבית' },
+      { item: '-' },
+      { item: 'אודות', modItem: 'breadcrumbs__item-current' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-about-gallery.html" %}
+  {% include "partials/sections/_s-numbers.html" %}
+  {% include "partials/sections/_s-team.html" %}
+  {% include "partials/sections/_s-member.html" %}
+  {% include "partials/sections/_s-car-list.html" %}
+  {% include "partials/sections/_s-call.html" %}
+{% endblock %}

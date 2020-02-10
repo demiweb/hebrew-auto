@@ -1,0 +1,40 @@
+<!-- begin gallery -->
+<div class="gallery js-gallery">
+  <div class="gallery__slider">
+    <!-- begin slider -->
+    <div class="slider__wrap slider--gallery__wrap">
+      <div class="swiper-container js-slider" data-slider="gallery">
+        <div class="swiper-wrapper slider slider--gallery js-lightgallery">
+          {% for i in gallery.slider %}
+          <a
+            href="./img/{{ i.img }}"
+            class="swiper-slide gallery__img js-lazy"
+            data-background-image="./img/{{ i.img }}"
+            ></a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="slider__controls">
+        <button class="slider__prev slider-prev js-slider-prev"></button>
+        <button class="slider__next slider-next js-slider-next"></button>
+      </div>
+    </div>
+    <!-- end slider -->
+  </div>
+
+  <div class="gasllery__thumbs">
+    <!-- begin slider -->
+    <div class="slider__wrap slider--thmbs__wrap">
+      <div class="swiper-container js-slider" data-slider="thumbs">
+        <div class="swiper-wrapper">
+          {% for i in gallery.slider %}
+          <button class="swiper-slide gallery__thumb js-lazy" data-background-image="./img/{{ i.thumb }}"></button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- end slider -->
+  </div>
+</div>
+<!-- end gallery -->

@@ -1,0 +1,58 @@
+{%set
+list = [
+  {
+    title: 'ממוסך של שני עובדים (בשנת 1936) הפך מוסך תלפיות למוסך מורשה רנו וניסאן גדול ומוביל בחיפה ובצפון, המעסיק 35 אנשי צוות (שלרובם ותק של מעל ל-10 שנות עבודה במוסך שלנו). '
+  },
+  {
+    title: 'חוג לקוחותינו הנאמנים גדל כבר מעל ל-30 שנה בקצב עקבי ומתמיד של כ-10% לשנה.'
+  },
+  {
+    title: 'מעל ל-90% מלקוחותינו הם לקוחות חוזרים (גם אם החליפו את רכבם כבר מספר פעמים).'
+  },
+  {
+    title: 'מוסך תלפיות חיפה מציע ללקוחותיו מבחר חלפים מקוריים ותחליפים באיכות מעולה ומחירים ללא תחרות.'
+  },
+  {
+    title: 'מרכז השירות שלנו נחשב כיום למקצועי ביותר באזור חיפה והצפון. למעשה, תקלות רבות שלא נמצא להן פתרון במוסכים אחרים מופנות אלינו לאבחון ותיקון. '
+  },
+  {
+    title: 'למרות שמוסך תלפיות מתמחה ברכבי ניסאן ורנו, אנחנו מספקים שירות גם לכל שאר סוגי הרכבים המשמשים אנשים וחברות בישראל.'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid--justify-content-center">
+      <div class="col col--8">
+        <h2 class="section__title title">
+          במוסך תלפיות אנחנו מטפלים ברכב שלך בדיוק בצורה בה אנחנו מטפלים ברכב שילד של אחד מאיתנו עומד לנהוג עליו.
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- begin car-list-block -->
+  <div class="car-list-block">
+    <div class="container">
+      <div class="grid grid--align-items-center">
+        <div class="col col--5">
+          <h3 class="car-list-block__title title title--h3">7 עובדות על מוסך תלפיות:</h3>
+
+          <ol class="car-list-block__list car-list">
+            {% for i in list %}
+            <li class="car-list__item">{{ i.title | safe }}</li>
+            {% endfor %}
+          </ol>
+        </div>
+
+        <div class="col col--7">
+          <img class="js-lazy" alt="" src="" data-src="./img/about/kisspng-car-2018-honda-cr-v-2017-honda-cr-v-nissan-rogue-renault-5acd8393c3c6c9.3035538115234180038019.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end car-list-block -->
+</section>
+<!-- end section -->
