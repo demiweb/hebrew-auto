@@ -7,4 +7,52 @@
     height: rem(30)
     padding: .3em 0
 
+.custom-select
+  $this: &
+  position: relative
+  color: $c-text
+  text-align: center
+  user-select: none
+  select
+    opacity: 0
+    position: absolute
+    width: 0
+    height: 0
+    z-index: -1
+  &__opener
+    height: rem(38)
+    border: 1px solid  $gray-light
+    background-color: $white
+    padding: .3em .9em
+    cursor: pointer    
+    +before
+      +icon-arrow(.3, .3, .07, currentColor, -45, em)
+      position: absolute
+      top: 50%
+      left: rem(10)
+      transform: translate(0, -50%) rotate(-45deg)
+      margin-top: -.1em
+  &__panel
+    position: absolute
+    z-index: 5
+    width: 100%
+    left: 0
+    top: 100%
+    background-color: $white
+    border: 1px solid  $gray-light
+    border-top: 0
+    +hidden
+  &__option
+    padding: .3em .9em
+    cursor: pointer
+    +tr(background-color .3s, color .3s)
+    +hover
+      color: $accent
+      background-color: $gray-lightest
+
+  &--open
+    #{$this}__panel
+      +visible
+
+
 

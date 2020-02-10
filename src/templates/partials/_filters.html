@@ -1,0 +1,66 @@
+{%set
+fields = [
+ {
+  options: [
+    { value: '1', option: 'מפיק' },
+    { value: '2', option: 'מפיק  1' },
+    { value: '3', option: 'מפיק  2' },
+    { value: '4', option: 'מפיק  3' }
+  ]
+ },
+ {
+  options: [
+    { value: '1', option: 'חתך צמיג  ' },
+    { value: '2', option: 'חתך צמיג  1' },
+    { value: '3', option: 'חתך צמיג  2' },
+    { value: '4', option: 'חתך צמיג  3' }
+  ]
+ },
+ {
+  options: [
+    { value: '1', option: 'רוחב הצמיג  ' },
+    { value: '2', option: 'רוחב הצמיג  1' },
+    { value: '3', option: 'רוחב הצמיג  2' },
+    { value: '4', option: 'רוחב הצמיג  3' }
+  ]
+ },
+ {
+  options: [
+    { value: '1', option: 'קוטר הצמיג  ' },
+    { value: '2', option: 'קוטר הצמיג  1' },
+    { value: '3', option: 'קוטר הצמיג  2' },
+    { value: '4', option: 'קוטר הצמיג  3' }
+  ]
+ }
+]
+%}
+
+<!-- begin filters -->
+<form class="section__block filters">
+  <h3 class="filters__title title title--h3">פילטר</h3>
+
+  <div class="filters__fields">
+    {% for i in fields %}
+    <div class="filters__field">
+      {{ mixins.input(
+        name = 'select',
+        mod = '',
+        type = '',
+        placeholder = '',
+        value = '',
+        fieldClass = 'js-select',
+        options = i.options
+      ) }}
+    </div>
+    {% endfor %}
+
+    <div class="filters__field">
+      {{ mixins.btn(
+        title = 'צרו קשר',
+        mod = 'btn--full btn--sm',
+        href = false
+      ) }}
+    </div>
+  </div>
+</form>
+<!-- end filters -->

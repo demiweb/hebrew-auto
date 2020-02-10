@@ -1,5 +1,8 @@
 <!-- begin hero -->
-<section class="hero">
+<section
+  class="hero{% if hero.mod %} {{ hero.mod }}{% endif %}{% if hero.bg %} js-lazy{% endif %}"
+  {% if hero.bg %}data-background-image="./img/hero/{{ hero.bg }}"{% endif %}
+>
   {% if hero.slider %}
   <!-- begin hero-slider -->
   <div class="hero-slider slider__wrap slider--hero__wrap">
@@ -34,11 +37,26 @@
 
     <div class="slider__pagination js-slider-pagination"></div>
     <div class="slider__controls">
-      <button class="slider__prev prev js-slider-prev"></button>
-      <button class="slider__next next js-slider-next"></button>
+      <button class="slider__prev slider-prev js-slider-prev"></button>
+      <button class="slider__next slider-next js-slider-next"></button>
     </div>
   </div>
   <!-- end hero-slider -->
+
+  {% else %}
+    <div class="container">
+      {% if hero.breadcrumbs %}
+      {{ mixins.list(
+        name = 'breadcrumbs',
+        modifications = { wrap: '', list: 'hero__breadcrumbs breadcrumbs', item: '', link: '' },
+        list = hero.breadcrumbs.list
+      ) }}
+      {% endif %}
+
+      {% if hero.title %}
+      <h1 class="hero__title title">{{ hero.title | safe }}</h1>
+      {% endif %}
+    </div>
   {% endif %}
 </section>
 <!-- end hero -->

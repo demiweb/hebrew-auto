@@ -1,0 +1,45 @@
+.item-card
+  +flex(flex-start, normal, column)
+  height: 100%
+  border: 1px solid  $gray-light
+  padding-top: rem(130)
+  position: relative
+  &__logo
+    position: absolute
+    z-index: 1
+    top: rem(40)
+    left: rem(25)
+    display: block
+    max-width: 50%
+  &__label
+    position: absolute
+    z-index: 1
+    top: rem(20)
+    right: 0
+    display: block
+  &__img
+    position: relative
+    padding-top: 55%
+    margin-bottom: rem(20)
+    display: block
+    img
+      +vcenter
+      max-height: 100%
+  &__content
+    flex-grow: 1
+    text-align: center
+    display: block
+    padding-bottom: rem(15)
+  &__title
+    color: $blue
+    text-decoration: underline
+    display: block
+    margin-bottom: rem(10)
+  &__bottom
+    color: $white
+    background-color: $c-text
+    font-size: em(18)
+    font-weight: 700
+    padding: .8rem 1rem
+    text-align: center
+

@@ -20,4 +20,7 @@ export default {
     },
   },
   scrollbar: 'js-scrollbar',
+  select: {
+    el: 'js-select',
+  },
 }

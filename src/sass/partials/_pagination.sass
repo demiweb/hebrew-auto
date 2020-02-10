@@ -1,0 +1,22 @@
+.pagination
+  +flex(center, center)
+  li
+    margin-left: rem(2)
+    margin-right: rem(2)
+  a
+    +flex(center, center)
+    border: 1px solid  $gray-light
+    height: rem(30)
+    min-width: rem(30)
+    +tr(color .3s, background-color .3s)
+    +hover
+      color: $white
+      background-color: $accent
+  .prev, .next
+    border: 0
+    +flex(center, center)
+    +before
+      +icon-arrow(.5, .5, .1, currentColor, 45, em)
+      display: block
+  .prev
+    transform: scaleX(-1)

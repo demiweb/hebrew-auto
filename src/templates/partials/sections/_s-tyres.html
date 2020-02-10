@@ -1,0 +1,50 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid--justify-content-center">
+      <div class="col col--8">
+        {% include "partials/_filters.html" %}
+      </div>
+    </div>
+    <div class="grid grid--no-bottom-gap">
+
+      {% for i in range(0, 8) %}
+      <div class="col col--3">
+        <!-- begin item-card -->
+        <a href="#" class="item-card">
+          <img class="item-card__logo js-lazy" src="" alt="" data-src="./img/Bridgestone_logo.svg.png"></img>
+
+          <span class="item-card__label card-label">
+            <span class="card-label__title">הנחה</span>
+            <span class="card-label__label corner-label">
+              <span class="corner-label__title">50%</span>
+            </span>
+            <span class="card-label__subttl">על הצמיג  <br>
+השני</span>
+          </span>
+
+          <span class="item-card__img">
+            <img class="js-lazy" alt="" src="" data-src="./img/tyre.png"/>
+          </span>
+
+          <span class="item-card__content">
+            <span class="item-card__title">Bridgestone 185/60R15</span>
+
+            <span class="item-card__price-block price-block">
+              <span class="price-block__upttl">מחיר:</span>
+              <span class="price-block__price price">₪359</span>
+              <span class="price-block__price-old price price--old">₪459</span>
+            </span>
+          </span>
+
+          <span class="item-card__bottom">יותר מפורט</span>
+        </a>
+        <!-- end item-card -->
+      </div>
+      {% endfor %}
+    </div>
+
+    {% include "partials/_pagination.html" %}
+  </div>
+</section>
+<!-- end section -->
