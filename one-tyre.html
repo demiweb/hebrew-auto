@@ -43,7 +43,7 @@
                   <div class="header-contact__text"> מים ו': 07:30 – 12:00 </div>
                 </div>
                 <div class="header__contact header-contact">
-                  <div class="header-contact__text"> צרו קשר: </div>
+                  <div class="header-contact__text header-contact__text--front"> צרו קשר: </div>
                   <div class="header-contact__icon">
                     <!-- begin icon-telephone -->
                     <svg viewBox="0 0 512 512" class="icon icon-telephone" width="1.000em" height="1em">
@@ -81,22 +81,98 @@
         <div class="header__bottom">
           <div class="container">
             <div class="header__inner">
-              <!-- begin nav -->
-              <nav class="nav header__nav">
-                <ul>
-                  <li class=" nav__item-current"><a href="#">דף הבית </a></li>
-                  <li><a href="#">אודות </a></li>
-                  <li><a href="#">שרותי המוסך </a></li>
-                  <li><a href="#">רכבי דאצ'יה </a></li>
-                  <li><a href="#">תחזוקה </a></li>
-                  <li><a href="#">תיקוני פחחות וצבע </a></li>
-                  <li><a href="#">לקוחות ממליצים </a></li>
-                  <li><a href="#">שירותים נילווים </a></li>
-                  <li><a href="#">שרותי ביטוח </a></li>
-                  <li><a href="#">צרו קשר</a></li>
-                </ul>
-              </nav>
-              <!-- end nav-->
+              <div class="header__burger">
+                <button class="burger js-burger"><span></span></button>
+              </div>
+              <div class="header__nav-wrap js-menu">
+                <!-- begin nav -->
+                <nav class="nav header__nav">
+                  <ul>
+                    <li class=" nav__current-item"><a href="#">דף הבית </a></li>
+                    <li class=" nav__item-with-submenu"><a href="#">אודות </a>
+                      <ul>
+                        <li><a href="#">חזוקה </a></li>
+                        <li><a href="#">חזוקה </a></li>
+                        <li><a href="#">חזוקה </a></li>
+                        <li><a href="#">חזוקה </a></li>
+                        <li><a href="#">חזוקה </a></li>
+                        <li><a href="#">חזוקה </a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">שרותי המוסך </a></li>
+                    <li><a href="#">רכבי דאצ'יה </a></li>
+                    <li><a href="#">תחזוקה </a></li>
+                    <li><a href="#">תיקוני פחחות וצבע </a></li>
+                    <li><a href="#">לקוחות ממליצים </a></li>
+                    <li><a href="#">שירותים נילווים </a></li>
+                    <li><a href="#">שרותי ביטוח </a></li>
+                    <li><a href="#">צרו קשר</a></li>
+                  </ul>
+                </nav>
+                <!-- end nav-->
+                <div class="header__meta-mob">
+                  <div class="header__contacts">
+                    <div class="header__contact header-contact">
+                      <div class="header-contact__icon">
+                        <!-- begin icon-pin -->
+                        <svg viewBox="0 0 512 512" class="icon icon-pin" width="1.000em" height="1em">
+                          <path d="M256 0C150.125 0 64 86.135 64 192c0 141.646 177.146 310 184.688 317.104C250.75 511.031 253.375 512 256 512s5.25-.969 7.313-2.896C270.854 502 448 333.646 448 192 448 86.135 361.875 0 256 0zm0 486.406C222.479 452.938 85.333 308.833 85.333 192c0-94.104 76.563-170.667 170.667-170.667S426.667 97.896 426.667 192c0 116.833-137.146 260.938-170.667 294.406z" />
+                          <path d="M256 85.333c-58.813 0-106.667 47.854-106.667 106.667S197.188 298.667 256 298.667 362.667 250.813 362.667 192 314.813 85.333 256 85.333zm0 192c-47.063 0-85.333-38.281-85.333-85.333s38.271-85.333 85.333-85.333 85.333 38.281 85.333 85.333-38.27 85.333-85.333 85.333z" />
+                        </svg>
+                        <!-- end icon-pin -->
+                      </div>
+                      <div class="header-contact__text"> דרך בר יהודה 147, 20300 נשר </div>
+                    </div>
+                    <div class="header__contact header-contact">
+                      <div class="header-contact__icon">
+                        <!-- begin icon-clock -->
+                        <svg height="1em" viewBox="0 0 480 480" width="1.000em" class="icon icon-clock">
+                          <path d="M240 0C107.453 0 0 107.453 0 240s107.453 240 240 240 240-107.453 240-240C479.852 107.516 372.484.148 240 0zm0 464C116.29 464 16 363.71 16 240S116.29 16 240 16s224 100.29 224 224c-.14 123.652-100.348 223.86-224 224zm0 0" />
+                          <path d="M240 48C133.96 48 48 133.96 48 240s85.96 192 192 192 192-85.96 192-192c-.125-105.988-86.012-191.875-192-192zm8 367.8V392a8 8 0 00-16 0v23.8C141.14 411.56 68.441 338.86 64.2 248H88a8 8 0 000-16H64.2C68.44 141.14 141.14 68.441 232 64.2V88a8 8 0 0016 0V64.2c90.86 4.241 163.559 76.94 167.8 167.8H392a8 8 0 000 16h23.8c-4.241 90.86-76.94 163.559-167.8 167.8zm0 0" />
+                          <path d="M344 232h-81.473A24.003 24.003 0 00240 216c-3.57.012-7.09.832-10.297 2.398l-.047-.07-88-88a8 8 0 00-11.312 11.313l88 88 .07.047A23.72 23.72 0 00216 240c-.023 11.676 8.379 21.664 19.887 23.645 11.508 1.976 22.761-4.633 26.64-15.645H344a8 8 0 000-16zm-104 16a8 8 0 110-16 8 8 0 010 16zm0 0" />
+                        </svg>
+                        <!-- end icon-clock -->
+                      </div>
+                      <div class="header-contact__text"> ימים א' – ה': 07:30 – 16:00р </div>
+                      <div class="header-contact__text"> מים ו': 07:30 – 12:00 </div>
+                    </div>
+                    <div class="header__contact header-contact">
+                      <div class="header-contact__text header-contact__text--front"> צרו קשר: </div>
+                      <div class="header-contact__icon">
+                        <!-- begin icon-telephone -->
+                        <svg viewBox="0 0 512 512" class="icon icon-telephone" width="1.000em" height="1em">
+                          <path d="M232.484 390.324c-3.902 3.899-3.902 10.23 0 14.137 3.91 3.902 10.239 3.902 14.137 0 3.91-3.906 3.91-10.238 0-14.137-3.898-3.91-10.226-3.91-14.137 0zm0 0" />
+                          <path d="M488.918 372.957l-75.922-64.559c-.351-.296-.723-.57-1.11-.816-19.917-12.68-45.491-9.871-62.19 6.824l-41.395 41.39a9.975 9.975 0 01-10.895 2.173c-46.742-19.336-85.14-48.446-114.129-86.512-22.105-29.027-30.074-52.094-31.125-55.344a9.938 9.938 0 00-.605-2.062 9.949 9.949 0 012.172-10.887l41.39-41.402c16.7-16.7 19.504-42.274 6.825-62.192-.102-.16-.207-.316-.317-.472L146.79 22.906C129.54-3.855 91.965-7.898 69.414 14.648l-8.289 8.29a.047.047 0 01-.02.019L31.512 52.551C-3.778 87.844-9.551 140.875 14.82 205.92c20.875 55.72 62.664 116.7 117.668 171.704 56.305 56.305 118.934 98.867 176.348 119.848 56.828 20.761 117.277 23.32 160.062-19.47l27.91-27.905c22.45-22.453 18.532-59.782-7.89-77.141zm-88.313-48.848l75.856 64.504c.348.297.719.57 1.105.817 16.204 10.316 18.657 32.972 5.098 46.527l-2.07 2.074-129.38-96.867 12.622-12.617c9.863-9.867 24.894-11.652 36.77-4.438zM130.082 33.895c.102.16.207.32.316.472l54.805 76.164c7.445 11.918 5.723 27.133-4.234 37.09l-12.23 12.234L81.206 31.137l2.348-2.348c13.613-13.613 36.25-11.039 46.527 5.106zm185.613 444.793c-54.734-20-114.777-60.915-169.066-115.204-53.031-53.027-93.191-111.476-113.086-164.578-14.934-39.86-24.953-95.152 12.11-132.21l21.16-21.165 87.53 128.719-14.761 14.77a29.88 29.88 0 00-6.848 31.835c3.157 12.954 17.68 39.84 32.332 59.653 21.563 29.156 60.7 69.465 124.696 95.941 11.246 4.653 24.07 2.098 32.68-6.508l14.488-14.492 129.379 96.867-11.551 11.547c-39.73 39.735-97.551 29.992-139.063 14.824zm0 0" />
+                          <path d="M213.719 366.45c-10.563-9.262-28.832-25.192-38.453-35.09-23.594-24.247-48.348-53.637-63.067-74.872-3.144-4.539-9.375-5.672-13.914-2.523-4.539 3.144-5.668 9.375-2.523 13.914 18.562 26.781 45.836 57.555 65.168 77.422 10.156 10.453 28.582 26.523 39.601 36.183 4.145 3.633 10.461 3.235 14.114-.925 3.64-4.149 3.226-10.47-.926-14.11zm0 0" />
+                        </svg>
+                        <!-- end icon-telephone -->
+                      </div>
+                      <a href="tel:0779555648" class="header-contact__link">077-9555648</a>
+                    </div>
+                  </div>
+                  <div class="header__logos-mob-wrap">
+                    <!-- begin header__logos -->
+                    <div class="header__logos">
+                      <img class="js-lazy" alt="" src="" data-src="./img/logos/nissan-symbol-2012-1920x1080.png" />
+                      <img class="js-lazy" alt="" src="" data-src="./img/logos/dacia-logo-971F424816-seeklogo.com.png" />
+                      <img class="js-lazy" alt="" src="" data-src="./img/logos/car_logo_PNG1661.png" />
+                    </div>
+                    <!-- end header__logos -->
+                    <!-- begin social -->
+                    <ul class="header__social social" class="social">
+                      <li><a href="#">
+                          <!-- begin icon-facebook -->
+                          <svg viewBox="0 0 512 512" class="icon icon-facebook" width="1.000em" height="1em">
+                            <path d="M448 0H64C28.704 0 0 28.704 0 64v384c0 35.296 28.704 64 64 64h384c35.296 0 64-28.704 64-64V64c0-35.296-28.704-64-64-64z" />
+                            <path style="fill:#fff" d="M432 256h-80v-64c0-17.664 14.336-16 32-16h32V96h-64c-53.024 0-96 42.976-96 96v64h-64v80h64v176h96V336h48l32-80z" />
+                          </svg>
+                          <!-- end icon-facebook -->
+                        </a></li>
+                    </ul>
+                    <!-- end social-->
+                  </div>
+                </div>
+              </div>
               <img class="header__img js-lazy" alt="" width="50" src="" data-src="./img/cwsd.png" />
               <a href="/" class="header__logo logo">
                 <img class="js-lazy" alt="" src="" data-src="./img/logo.png" />
@@ -115,7 +191,7 @@
             <li>-</li>
             <li><a href="#">צמיגי תלפיות חיפה</a></li>
             <li>-</li>
-            <li class=" breadcrumbs__item-current">Bridgestone 185/60R15</li>
+            <li class=" breadcrumbs__current-item">Bridgestone 185/60R15</li>
           </ul>
           <!-- end breadcrumbs-->
         </div>
@@ -132,7 +208,7 @@
                   <div class="item-descr">
                     <h2 class="item-descr__title">Bridgestone 185/60R15</h2>
                     <div class="item-descr__price-block price-block price-block--flex">
-                      <div class="price-block__upttl">מחיר:</div>
+                      <div class="price-block__title">מחיר:</div>
                       <div class="price-block__price price">₪359</div>
                       <div class="price-block__price-old price price--old">₪459</div>
                     </div>
@@ -214,7 +290,7 @@
                     <span class="item-card__content">
                       <span class="item-card__title">Bridgestone 185/60R15</span>
                       <span class="item-card__price-block price-block">
-                        <span class="price-block__upttl">מחיר:</span>
+                        <span class="price-block__title">מחיר:</span>
                         <span class="price-block__price price">₪359</span>
                         <span class="price-block__price-old price price--old">₪459</span>
                       </span>
@@ -238,7 +314,7 @@
                     <span class="item-card__content">
                       <span class="item-card__title">Bridgestone 185/60R15</span>
                       <span class="item-card__price-block price-block">
-                        <span class="price-block__upttl">מחיר:</span>
+                        <span class="price-block__title">מחיר:</span>
                         <span class="price-block__price price">₪359</span>
                         <span class="price-block__price-old price price--old">₪459</span>
                       </span>
@@ -262,7 +338,7 @@
                     <span class="item-card__content">
                       <span class="item-card__title">Bridgestone 185/60R15</span>
                       <span class="item-card__price-block price-block">
-                        <span class="price-block__upttl">מחיר:</span>
+                        <span class="price-block__title">מחיר:</span>
                         <span class="price-block__price price">₪359</span>
                         <span class="price-block__price-old price price--old">₪459</span>
                       </span>
@@ -286,7 +362,7 @@
                     <span class="item-card__content">
                       <span class="item-card__title">Bridgestone 185/60R15</span>
                       <span class="item-card__price-block price-block">
-                        <span class="price-block__upttl">מחיר:</span>
+                        <span class="price-block__title">מחיר:</span>
                         <span class="price-block__price price">₪359</span>
                         <span class="price-block__price-old price price--old">₪459</span>
                       </span>
@@ -310,7 +386,7 @@
                     <span class="item-card__content">
                       <span class="item-card__title">Bridgestone 185/60R15</span>
                       <span class="item-card__price-block price-block">
-                        <span class="price-block__upttl">מחיר:</span>
+                        <span class="price-block__title">מחיר:</span>
                         <span class="price-block__price price">₪359</span>
                         <span class="price-block__price-old price price--old">₪459</span>
                       </span>
@@ -334,7 +410,7 @@
                     <span class="item-card__content">
                       <span class="item-card__title">Bridgestone 185/60R15</span>
                       <span class="item-card__price-block price-block">
-                        <span class="price-block__upttl">מחיר:</span>
+                        <span class="price-block__title">מחיר:</span>
                         <span class="price-block__price price">₪359</span>
                         <span class="price-block__price-old price price--old">₪459</span>
                       </span>
@@ -358,7 +434,7 @@
                     <span class="item-card__content">
                       <span class="item-card__title">Bridgestone 185/60R15</span>
                       <span class="item-card__price-block price-block">
-                        <span class="price-block__upttl">מחיר:</span>
+                        <span class="price-block__title">מחיר:</span>
                         <span class="price-block__price price">₪359</span>
                         <span class="price-block__price-old price price--old">₪459</span>
                       </span>
@@ -382,7 +458,7 @@
                     <span class="item-card__content">
                       <span class="item-card__title">Bridgestone 185/60R15</span>
                       <span class="item-card__price-block price-block">
-                        <span class="price-block__upttl">מחיר:</span>
+                        <span class="price-block__title">מחיר:</span>
                         <span class="price-block__price price">₪359</span>
                         <span class="price-block__price-old price price--old">₪459</span>
                       </span>
@@ -458,7 +534,7 @@
                 <!-- begin nav -->
                 <nav class="nav nav--footer">
                   <ul>
-                    <li class=" nav__item-current"><a href="#">יפולים תקופתיים</a></li>
+                    <li class=" nav__current-item"><a href="#">יפולים תקופתיים</a></li>
                     <li><a href="#">יקוני מכונאות</a></li>
                     <li><a href="#">יבחון ממוחשב לתקלות</a></li>
                     <li><a href="#">יקוני חשמל לרכב</a></li>
