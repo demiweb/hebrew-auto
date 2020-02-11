@@ -45,11 +45,12 @@ navs = [
 <!-- begin footer -->
 <footer class="footer">
   <div class="container">
+    
 
     <div class="grid grid--no-bottom-gap-all">
       {% for i in navs %}
-      <div class="col col--2">
-        <div class="footer__right">
+      <div class="col col--lg-2 col--sm-3 col--6">
+        <div class="footer__block">
           <h5 class="footer__title title title--h5">{{ i.title | safe }}</h5>
 
           {{ mixins.list(
@@ -62,18 +63,20 @@ navs = [
       </div>
       {% endfor %}
 
-      <div class="col col--3">
+      <div class="col col--lg-3">
         <div class="footer__left">
           <a href="/" class="footer__logo logo">
             <img class="js-lazy" alt="" src="" data-src="./img/logo.png"/>
           </a>
 
           <div class="footer__copy">© Copyright - מרכז שירות תלפיות 1936 </div>
-
-          {{ mixins.btn(
-            title = 'לקביעת תור',
-            mod = 'footer__btn'
-          ) }}
+          
+          <div class="footer__btn">
+            {{ mixins.btn(
+              title = 'לקביעת תור',
+              mod = ''
+            ) }}
+          </div>
         </div>
       </div>
     </div>

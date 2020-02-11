@@ -24,20 +24,20 @@ items = [
 %}
 
 <!-- begin section -->
-<section class="section section--gray s-man-info-items pb-0">
+<section class="s-man-info-items">
   <div class="container">
-    <div class="grid">
+    <div class="grid grid--no-bottom-gap">
 
-      <div class="col col--8 col--no-bottom-gap">
+      <div class="col col--lg-8 col--no-bottom-gap">
         <h3 class="section__title title title--h3">בנוסף לטיפולים השגרתיים, במוסך תלפיות יעמדו לרשותך גם שירותים ייחודיים נוספים:</h3>
 
         <!-- begin info-items -->
-        <div class="info-items">
+        <div class="s-man-info-items__items info-items">
           <div class="grid grid--justify-content-center">
             {% for i in items %}
-            <div class="col col--4">
+            <div class="col col--sm-4 col--xs-6">
               <!-- begin info-item -->
-              <div class="info-item">
+              <div class="s-man-info-items__item info-item">
                 <div class="info-item__icon">
                   {{ mixins.icon(i.icon) }}
                 </div>
@@ -52,7 +52,7 @@ items = [
         <!-- end info-items -->
       </div>
 
-      <div class="col col--4 col--no-bottom-gap">
+      <div class="col col--lg-4 col--no-bottom-gap">
         <div class="s-man-info-items__img">
           <img class="js-lazy" alt="" src="" data-src="./img/people/1.png"/>
         </div>

@@ -28,7 +28,7 @@
     top: 50%
     transform: translate(-50%,  0)
     width: 100%
-    max-width:  $container-max-width - ($container-padding-static * 2)
+    max-width:  calc(#{$container-max-width} - #{($container-padding-static * 2)})
   &__prev, &__next
     position: absolute
     top: 50%
@@ -45,6 +45,8 @@
     width: 100%
     left: 0
     bottom: rem(30)
+    +xs
+      bottom: rem(20)
     .swiper-pagination-bullet
       display: inline-block
       width: rem(14)
@@ -56,6 +58,13 @@
       margin-right: rem(2)
       &.swiper-pagination-bullet-active
         background-color: $accent
+
+  &--hero
+    &__wrap
+      .slider
+        &__controls
+          +xxs
+            display: none
 
   &--gallery
     &__wrap

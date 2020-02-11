@@ -1,5 +1,8 @@
 .footer
-  &__right, &__left    
+  position: relative
+  +lg
+    padding-top: rem(150)
+  &__block, &__left    
     padding-top: rem(50)
     padding-bottom: rem(50)
   &__title
@@ -14,13 +17,33 @@
       width: rem(45)
       height: 1px
       background-color: $accent
+  &__block
+    +lg
+      padding-top: 0
+      padding-bottom: 0
+      margin-bottom: rem(30)
   &__left
     border-right: 1px solid  $gray-light
     height: 100%
     text-align: left
+    +lg
+      text-align: right
+      padding-top: 0
+      border-right: 0
+      +flex(flex-start, normal, column-reverse)
   &__logo
     margin-bottom: rem(20)
+    +lg
+      position: absolute
+      z-index: 1
+      right: rem(15)
+      top: rem(70)
   &__copy
     margin-bottom: rem(30)
     font-size: em(14)
     color: #9d9d9d
+    +lg
+      margin-bottom: 0
+  &__btn
+    +lg
+      margin-bottom: rem(15)

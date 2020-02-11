@@ -1,17 +1,35 @@
 .s-man-info-items
+  position: relative
+  +lgmin
+    padding-top: rem(95)
+    background-color: $gray-lightest
   &__img
-    text-align: center
-    font-size: 0
+    +flex(flex-end, center, column)
+    +lg
+      display: none
+  &__items
+    // margin-bottom: rem(30)
+  &__item
+    +xs
+      margin-bottom: rem(15)
+      height: auto
 
 .s-call
   +cover
   margin-top: rem(80)
   color: $white
+  background-position: 70% 50%
+  +lg
+    margin-top: 0
+  +md
+    background-position: 80% 50%
   &__img
     display: block
     margin-left: auto
     margin-right: auto
     margin-top: rem(-80)
+    +lg
+      display: none
   &__content
     padding-top: rem(70)
     padding-bottom: rem(70)    
