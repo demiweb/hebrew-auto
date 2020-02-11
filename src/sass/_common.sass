@@ -23,8 +23,6 @@ body
 
 .out
   padding-top: $header-height
-  +lg
-    padding-top: $header-height-lg
 
 .main
   &__breadcrumbs
@@ -70,7 +68,7 @@ body
 .price-block
   $this: &
   display: block
-  &__title
+  &__upttl
     display: block
     color: #fd3c00
   &__price
@@ -79,7 +77,7 @@ body
     display: block
   &--flex
     +flex(flex-start, baseline)
-    #{$this}__title, #{$this}__price
+    #{$this}__upttl, #{$this}__price
       margin-left: rem(8)
 
 .price
