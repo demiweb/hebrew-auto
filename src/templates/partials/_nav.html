@@ -3,8 +3,17 @@
   hasWrap = true,
   modifications = { wrap: 'header__nav', item: '', link: '' },
   list = [
-    { link: "דף הבית  ", modItem: 'nav__item-current' },
-    { link: "אודות  " },
+    { link: "דף הבית  ", modItem: 'nav__current-item' },
+    { link: "אודות  ", modItem: 'nav__item-with-submenu', item: '
+      <ul>
+        <li><a href="#">חזוקה </a></li>
+        <li><a href="#">חזוקה </a></li>
+        <li><a href="#">חזוקה </a></li>
+        <li><a href="#">חזוקה </a></li>
+        <li><a href="#">חזוקה </a></li>
+        <li><a href="#">חזוקה </a></li>
+      </ul>
+    ' },
     { link: "שרותי המוסך " },
     { link: "רכבי דאצ'יה " },
     { link: "תחזוקה  " },

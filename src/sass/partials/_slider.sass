@@ -4,10 +4,14 @@
   height: 1em
   font-size: rem(35)
   border: 1px solid currentColor
+  +tr(color .3s, background-color .3s)
   +before
     +icon-arrow(.3, .3, .07, currentColor, 45, em)
     display: block
     margin-left: .1em
+
+  +hover
+    color: $accent
 
 .slider-next
   transform: scaleX(-1)
@@ -30,9 +34,9 @@
     top: 50%
     transform: translate(0, -50%)
   &__prev
-    left: 0
+    left: rem(15)
   &__next
-    right: 0
+    right: rem(15)
     transform: translate(0, -50%) scaleX(-1)
   &__pagination
     text-align: center

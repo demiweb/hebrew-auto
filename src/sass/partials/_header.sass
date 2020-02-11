@@ -7,6 +7,8 @@
   top: 0
   &__top
     background-color: $white
+    +lg
+      display: none
     
   &__bottom
     background-color: $gray-lightest
@@ -18,43 +20,125 @@
       height: $header-top-height
     #{$this}__bottom &
       height: $header-bottom-height
+      +lg
+        height: $header-bottom-height-lg
   &__nav
     flex-grow: 1
+  &__nav-wrap
+    +lg
+      position: absolute
+      z-index: 10
+      background-color: $white
+      top: 100%
+      max-height: calc(100vh - #{$header-height-lg})
+      overflow: auto
+      right: 0
+      left: 0
+      +hidden
+      +before
+        +arr(1em, .5em, currentColor, t)
+        position: absolute
+        bottom: 100%
+        right: rem(25)
   &__contacts
     +flex(flex-start, center)
     flex-grow: 1
+    +lg
+      display: block
+      margin-bottom: rem(25)
   &__contact
     +notlast
       margin-left: rem(100)
+      +xxl
+        margin-left: rem(50)
+      +lg
+        margin-left: 0
+        margin-bottom: rem(25)
   &__social
     +flex(flex-start, center)
     margin-left: rem(15)
     color: $gray
+    +lg
+      margin-left: 0
+  &__logos-mob-wrap
+    +flex(flex-start, center)
   &__logos
     font-size: 0
+    +lg
+      margin-left: rem(15)
     img
       display: inline-block
       margin-left: rem(7)
       margin-right: rem(7)
   &__logo
     margin-right: rem(25)
+    +lg
+      width: 125px
+      margin-right: rem(15)
+  &__burger
+    flex-grow: 1
+    +lgmin
+      display: none
+  &__img
+    +lg
+      width: 42px
+  &__meta-mob
+    padding: rem(15)
+    +lgmin
+      display: none
 
 
 .header-contact
   +flex(flex-start, center)
+  position: relative  
+  +lg
+    display: block
+    padding-right: rem(37)
   &__text
     +notlast
       margin-left: em(10)
+    &--front
+      +lg
+        display: none
   &__link
     font-weight: 400
-  &__icon
+  &__icon    
     background-color: $accent
     width: rem(27)
     height: rem(27)
+    margin-left: rem(10)
     flex: 0 0 rem(27)
     border-radius: 50%
-    margin-left: rem(10)
     font-size: 0
     +flex(center, center)
     .icon
       font-size: 1rem
+    +lg
+      position: absolute
+      right: 0
+      top: -.15rem
+
+.burger 
+  $this: &
+  display: flex
+  align-items: center
+  justify-content: center
+  width: rem(37)
+  height: rem(20)
+  position: relative
+  span
+    display: block
+    &, &::after, &::before
+      width: 100%
+      height: rem(4)
+      background-color: currentColor
+      backface-visibility: hidden
+      +tr(transform .3s)
+    &::after, &::before
+      content: ""
+      position: absolute
+      left: 0
+    &::after
+      top: 0
+    &::before
+      bottom: 0
