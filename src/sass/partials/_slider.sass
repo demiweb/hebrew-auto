@@ -52,3 +52,28 @@
       margin-right: rem(2)
       &.swiper-pagination-bullet-active
         background-color: $accent
+
+  &--gallery
+    &__wrap
+      .slider
+        &__prev
+          left: rem(20)
+        &__next
+          right: rem(20)
+
+  &--team
+    &__wrap
+      .slider
+        &__controls, &__prev, &__next
+          position: static
+          transform: translate(0, 0)
+        &__controls
+          margin-top: rem(30)
+          text-align: center
+
+        &__prev, &__next
+          margin-left: rem(15)
+          margin-right: rem(15)
+        &__next
+          transform: scaleX(-1)
+          

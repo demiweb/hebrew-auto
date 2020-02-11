@@ -30,21 +30,21 @@
           </div>
         </div>
 
+        {{ mixins.list(
+          name = 'social',
+          modifications = { wrap: '', list: 'header__social social', item: '', link: '' },
+          list = [
+            { item: '', link: mixins.icon('facebook'), modItem: '', modLink: '' }
+          ]
+        ) }}
+
         <!-- begin header__logos -->
         <div class="header__logos">
           <img class="js-lazy" alt="" src="" data-src="./img/logos/nissan-symbol-2012-1920x1080.png"/>
           <img class="js-lazy" alt="" src="" data-src="./img/logos/dacia-logo-971F424816-seeklogo.com.png"/>
           <img class="js-lazy" alt="" src="" data-src="./img/logos/car_logo_PNG1661.png"/>
         </div>
-        <!-- end header__logos -->
-
-        {{ mixins.list(
-          name = 'social',
-          modifications = { wrap: '', list: 'header__social', item: '', link: '' },
-          list = [
-            { item: '', link: mixins.icon('facebook'), modItem: '', modLink: '' }
-          ]
-        ) }}
+        <!-- end header__logos -->        
       </div>
     </div>
   </div>
@@ -52,13 +52,13 @@
   <div class="header__bottom">
     <div class="container">
       <div class="header__inner">
+        {% include "partials/_nav.html" %}
+
+        <img class="header__img js-lazy" alt="" width="50" src="" data-src="./img/cwsd.png"/>
+
         <a href="/" class="header__logo logo">
           <img class="js-lazy" alt="" src="" data-src="./img/logo.png"/>
         </a>
-
-        {% include "partials/_nav.html" %}
-
-        <img class="header__img js-lazy" alt="" src="" data-src="./img/cwsd.png"/>
       </div>
     </div>
   </div>

@@ -24,7 +24,38 @@ export default class Slider {
           init: onInit,
         },
       },
+      gallery: {
+        navigation,
+        on: {
+          init: onInit,
+        },
+      },
+      thumbs: {
+        slidesPerView: 4,
+        on: {
+          init: onInit,
+        },
+        spaceBetween: 10,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      },
+      team: {
+        slidesPerView: 4,
+        grabCursor: true,
+        spaceBetween: 30,
+        navigation,
+        on: {
+          init: onInit,
+        },
+      },
     })
+  }
+
+  _getSliders() {
+    this.gallerySliders = this.containers.filter(
+      container => container.dataset.slider === 'gallery'
+    )
   }
 
   _initSliders() {
@@ -35,6 +66,26 @@ export default class Slider {
       slider.init()
       this.sliders = [...this.sliders, slider]
     })
+
+    this.initGallerySliders()
+  }
+
+  initGallerySliders() {
+    if (!this.gallerySliders.length) return
+
+    this.sliders.forEach(sliderObj => {
+      const slider = sliderObj
+      if (slider.name === 'gallery') {
+        const gallery = slider.container.closest(`.${classNames.gallery}`)
+        const thumbs = gallery.querySelector(`.${classNames.container}[data-slider="thumbs"]`)
+        const [thumbsSlider] = this.sliders.filter(el => el.container === thumbs)
+
+        slider.options.thumbs = {
+          swiper: thumbsSlider.swiper,
+        }
+        slider.init()
+      }
+    })
   }
 
   init() {
@@ -42,6 +93,7 @@ export default class Slider {
     if (!this.containers.length) return
 
     this._getOptions()
+    this._getSliders()
     this._initSliders()
   }
 }

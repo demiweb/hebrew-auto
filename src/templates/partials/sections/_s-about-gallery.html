@@ -1,46 +1,48 @@
 {%set
 gallery = {
   slider: [
-    { img: 'about/Talpiot _097.jpg', thumb: 'about/thumb.jpg' },
-    { img: 'about/Talpiot _097.jpg', thumb: 'about/thumb.jpg' },
-    { img: 'about/Talpiot _097.jpg', thumb: 'about/thumb.jpg' },
-    { img: 'about/Talpiot _097.jpg', thumb: 'about/thumb.jpg' },
-    { img: 'about/Talpiot _097.jpg', thumb: 'about/thumb.jpg' },
-    { img: 'about/Talpiot _097.jpg', thumb: 'about/thumb.jpg' },
-    { img: 'about/Talpiot _097.jpg', thumb: 'about/thumb.jpg' },
-    { img: 'about/Talpiot _097.jpg', thumb: 'about/thumb.jpg' },
-    { img: 'about/Talpiot _097.jpg', thumb: 'about/thumb.jpg' }
+    { img: 'about/gallery-img.jpg', thumb: 'about/thumb.jpg' },
+    { img: 'about/gallery-img.jpg', thumb: 'about/thumb.jpg' },
+    { img: 'about/gallery-img.jpg', thumb: 'about/thumb.jpg' },
+    { img: 'about/gallery-img.jpg', thumb: 'about/thumb.jpg' },
+    { img: 'about/gallery-img.jpg', thumb: 'about/thumb.jpg' },
+    { img: 'about/gallery-img.jpg', thumb: 'about/thumb.jpg' },
+    { img: 'about/gallery-img.jpg', thumb: 'about/thumb.jpg' },
+    { img: 'about/gallery-img.jpg', thumb: 'about/thumb.jpg' },
+    { img: 'about/gallery-img.jpg', thumb: 'about/thumb.jpg' }
   ]
 }
 %}  
 
 <!-- begin section -->
-<section class="section">
+<section class="section s-gallery">
   <div class="container">
     <div class="grid">
       <div class="col col--6">
-        <h2 class="section__title title">
-          מוסך תלפיות חיפה הוקם בשנת 1936' לפני כ-75 שנה והוא מהוותיקים בישראל.
-        </h2>
+        <div class="s-gallery__right">
+          <h2 class="s-gallery__title title">
+            מוסך תלפיות חיפה הוקם בשנת 1936' לפני כ-75 שנה והוא מהוותיקים בישראל.
+          </h2>
 
-        <div class="section__block text-center">
-          במוסך תלפיות, מוסך מורשה רנו וניסאן, מהוותיקים במוסכי חיפה והצפון, ניתן לקבל שירותי מוסך מהמתקדמים ביותר בעולם. הטיפולים לרכב במחלקות המקצועיות של מרכז השירות מבוצעים בפיקוחו של צוות מקצועי ומיומן, שעובר השתלמויות תקופתיות מתקדמות אצל יצרני הרכב. הצוות הוותיק והמנוסה שלנו, המשולב בדור צעיר ומודרני של מכונאי רכב מוסמכים אשר נבחרו בקפידה, משתמש במיטב המכשור החדשני והמקצועי והבדיקות כולן מבוצעות לפי סטנדרטים בינלאומיים קפדנים.
-        </div>
-
-        <div class="grid">
-          {% for i in range(0, 3) %}
-          <div class="col col--4">
-            <!-- begin info-item -->
-            <div class="info-item">
-              <div class="info-item__icon">
-                {{ mixins.icon('review') }}
-              </div>
-
-              <div class="info-item__text">אנו תמיד מנסים לבצע את העבודה בצורה מושלמת כדי שתחזרו אלינו</div>
-            </div>
-            <!-- end info-item -->
+          <div class="s-gallery__text">
+            במוסך תלפיות, מוסך מורשה רנו וניסאן, מהוותיקים במוסכי חיפה והצפון, ניתן לקבל שירותי מוסך מהמתקדמים ביותר בעולם. הטיפולים לרכב במחלקות המקצועיות של מרכז השירות מבוצעים בפיקוחו של צוות מקצועי ומיומן, שעובר השתלמויות תקופתיות מתקדמות אצל יצרני הרכב. הצוות הוותיק והמנוסה שלנו, המשולב בדור צעיר ומודרני של מכונאי רכב מוסמכים אשר נבחרו בקפידה, משתמש במיטב המכשור החדשני והמקצועי והבדיקות כולן מבוצעות לפי סטנדרטים בינלאומיים קפדנים.
           </div>
-          {% endfor %}
+
+          <div class="grid">
+            {% for i in range(0, 3) %}
+            <div class="col col--4">
+              <!-- begin info-item -->
+              <div class="info-item">
+                <div class="info-item__icon">
+                  {{ mixins.icon('review') }}
+                </div>
+
+                <div class="info-item__text">אנו תמיד מנסים לבצע את העבודה בצורה מושלמת כדי שתחזרו אלינו</div>
+              </div>
+              <!-- end info-item -->
+            </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
 

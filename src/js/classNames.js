@@ -6,6 +6,7 @@ export default {
   },
   slider: {
     container: 'js-slider',
+    gallery: 'js-gallery',
     slider: {
       wrap: 'slider__wrap',
       prev: 'js-slider-prev',

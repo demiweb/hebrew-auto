@@ -1,0 +1,38 @@
+.car-list-block
+  @extend .section
+  background-color: $gray-lightest
+  &__title
+    margin-bottom: rem(25)
+
+.car-list
+  +counter('car', null)
+  &__item
+    position: relative
+    padding-right: rem(40)
+    padding-bottom: rem(25)
+    padding-top: rem(25)
+    +after
+      position: absolute
+      width: 100%
+      z-index: 0
+      background-color: $accent
+      height: 1px
+      width: 100%
+      left: 0
+      bottom: rem(10)
+    &::before
+      display: inline-block
+      text-align: center
+      font-size: em(14)
+      line-height: rem(20)
+      font-weight: 700
+      position: absolute
+      z-index: 1
+      bottom: 0
+      right: 0
+      background-color: $accent
+      color: $white
+      border-radius: rem(20)
+      height: rem(20)
+      min-width: rem(20)
+

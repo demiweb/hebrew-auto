@@ -1,0 +1,19 @@
+.number-block
+  color: $white
+  text-align: center
+  &__title
+    text-transform: uppercase
+    font-size: em(60)
+    font-weight: 700
+    position: relative
+    line-height: 1    
+    padding-bottom: .2em
+    margin-bottom: rem(20)
+    +before
+      width: rem(45)
+      background-color: $white
+      height: 1px
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translate(-50%, 0)

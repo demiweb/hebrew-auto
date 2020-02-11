@@ -1,0 +1,21 @@
+.gallery
+  height: 100%
+  &__slider
+    margin-bottom: rem(10)
+    color: $white
+  &__img
+    +cover
+    background-color: $gray
+    padding-top: percentage(350 / 750)
+  &__thumb
+    +cover
+    background-color: $gray
+    padding-top: 20%
+    position: relative
+    +before
+      +coverdiv
+      background-color: rgba($black, .7)
+    &.swiper-slide-thumb-active
+      +before
+        background-color: transparent
+        border: 2px solid  $accent
