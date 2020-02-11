@@ -3,32 +3,7 @@
   <div class="header__top">
     <div class="container">
       <div class="header__inner">
-        <div class="header__contacts">
-          <div class="header__contact header-contact">
-            <div class="header-contact__icon">{{ mixins.icon('pin') }}</div>
-            <div class="header-contact__text">
-              דרך בר יהודה 147, 20300 נשר
-            </div>
-          </div>
-
-          <div class="header__contact header-contact">
-            <div class="header-contact__icon">{{ mixins.icon('clock') }}</div>
-            <div class="header-contact__text">
-              ימים א' – ה': 07:30 – 16:00р
-            </div>
-            <div class="header-contact__text">
-              מים ו': 07:30 – 12:00
-            </div>
-          </div>
-
-          <div class="header__contact header-contact">
-            <div class="header-contact__text">
-              צרו קשר:
-            </div>
-            <div class="header-contact__icon">{{ mixins.icon('telephone') }}</div>
-            <a href="tel:0779555648" class="header-contact__link">077-9555648</a>
-          </div>
-        </div>
+        {% include "partials/_header-contacts.html" %}
 
         {{ mixins.list(
           name = 'social',
@@ -52,7 +27,38 @@
   <div class="header__bottom">
     <div class="container">
       <div class="header__inner">
-        {% include "partials/_nav.html" %}
+        <div class="header__burger">
+          <button class="burger js-burger"><span></span></button>
+        </div>
+
+        <div class="header__nav-wrap js-menu">
+          {% include "partials/_nav.html" %}
+
+          <div class="header__meta-mob">
+            {% include "partials/_header-contacts.html" %}            
+            
+            <div class="header__logos-mob-wrap">
+              <!-- begin header__logos -->
+              <div class="header__logos">
+                <img class="js-lazy" alt="" src="" data-src="./img/logos/nissan-symbol-2012-1920x1080.png"/>
+                <img class="js-lazy" alt="" src="" data-src="./img/logos/dacia-logo-971F424816-seeklogo.com.png"/>
+                <img class="js-lazy" alt="" src="" data-src="./img/logos/car_logo_PNG1661.png"/>
+              </div>
+              <!-- end header__logos -->
+
+              {{ mixins.list(
+                name = 'social',
+                modifications = { wrap: '', list: 'header__social social', item: '', link: '' },
+                list = [
+                  { item: '', link: mixins.icon('facebook'), modItem: '', modLink: '' }
+                ]
+              ) }}
+            </div>
+          </div>
+        </div>
+        
+
+        
 
         <img class="header__img js-lazy" alt="" width="50" src="" data-src="./img/cwsd.png"/>
 

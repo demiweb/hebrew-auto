@@ -1,9 +1,14 @@
 .item-card
+  $this: &
   +flex(flex-start, normal, column)
   height: 100%
   border: 1px solid  $gray-light
   padding-top: rem(130)
   position: relative
+  +hover
+    #{$this}__bottom
+      background-color: $accent
+      color: $white
   &__logo
     position: absolute
     z-index: 1
@@ -42,4 +47,5 @@
     font-weight: 700
     padding: .8rem 1rem
     text-align: center
+    +tr(color .3s, background-color .3s)
 
