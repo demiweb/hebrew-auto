@@ -1,15 +1,17 @@
-<!-- begin section -->
-<section class="section">
-  <div class="container">
-    <div class="grid grid--justify-content-center">
-      <div class="col col--8">
-        {% include "partials/_filters.html" %}
-      </div>
-    </div>
-    <div class="grid grid--no-bottom-gap">
+{%set
+filters = {
+  mod: 's-tyres__filters'
+}
+%}
 
+<!-- begin section -->
+<section class="section s-tyres">
+  <div class="container">
+    {% include "partials/_filters.html" %}
+
+    <div class="grid grid--no-bottom-gap">
       {% for i in range(0, 8) %}
-      <div class="col col--3">
+      <div class="col col--lg-3 col--md-4 col--xxs-6">
         {% include "partials/_item-card.html" %}
       </div>
       {% endfor %}

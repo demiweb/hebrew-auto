@@ -18,7 +18,7 @@ gallery = {
 <section class="section s-gallery">
   <div class="container">
     <div class="grid">
-      <div class="col col--6">
+      <div class="col col--md-6">
         <div class="s-gallery__right">
           <h2 class="s-gallery__title title">
             מוסך תלפיות חיפה הוקם בשנת 1936' לפני כ-75 שנה והוא מהוותיקים בישראל.
@@ -30,9 +30,9 @@ gallery = {
 
           <div class="grid">
             {% for i in range(0, 3) %}
-            <div class="col col--4">
+            <div class="col col--sm-4">
               <!-- begin info-item -->
-              <div class="info-item">
+              <div class="s-gallery__info-item info-item">
                 <div class="info-item__icon">
                   {{ mixins.icon('review') }}
                 </div>
@@ -46,7 +46,7 @@ gallery = {
         </div>
       </div>
 
-      <div class="col col--6">
+      <div class="col col--md-6">
         {% include "partials/_gallery.html" %}
       </div>
     </div>

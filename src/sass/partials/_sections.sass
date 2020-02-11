@@ -38,11 +38,29 @@
 
 .s-thanks
   position: relative
+  &__block
+    +lgmin
+      text-align: center
+  &__icon
+    +lg
+      margin-left: 0
+      margin-right: 0
   &__img
     position: absolute
     z-index: 0
     bottom: rem(-20)
     right: 10%
+    +xxl
+      right: 0
+    +lg
+      left: rem(25)
+      right: auto
+    +md
+      width: 60%
+    +sm
+      width: 50%
+    +xxs
+      display: none
 
 .s-gallery
   &__right
@@ -55,12 +73,21 @@
   &__text
     flex-grow: 1    
     margin-bottom: rem(30)
-    text-align: center
+    +mdmin
+      text-align: center
   &__title
-    @extend .section__title
+    margin-bottom: rem(30)
+    +mdmin
+      text-align: center
+  &__info-item
+    +md
+      margin-bottom: rem(30)
+      height: auto
 
 .s-two-cols
   position: relative
+  +md
+    +flex(flex-start, normal, column-reverse)
   &__left
     background-color: $gray
     +cover
@@ -77,10 +104,28 @@
       top: 50%
       right: 0
       transform: translate(0, -50%)
+    +md
+      position: relative
+      left: auto
+      top: auto
+      bottom: auto
+      padding-top: 60%
+      width: 100%
+      +before
+        +arr(6.25rem, #{rem(45)}, $accent, t)
+        top: auto
+        bottom: 0
+        left: 50%
+        right: auto
+        transform: translate(-50%, 0)
   &__right
     background-color: $accent
     padding-top: rem(130)
     padding-bottom: rem(130)
+    +md
+      padding-top: rem(60)
+      padding-bottom: rem(60)
+
 
 .s-item
   border-top: 1px solid $gray-lightest
@@ -92,3 +137,34 @@
     border-right: 1px solid $gray-lightest
     border-left: 1px solid $gray-lightest
     padding: rem(35)
+
+.s-tyres
+  +md
+    padding-top: 0
+  &__filters
+    margin-left: auto
+    margin-right: auto
+    max-width: 1010px
+    +md
+      margin-left: rem(-15)
+      margin-right: rem(-15)
+      border-left: 0
+      border-right: 0
+      border-top: 0
+
+.s-error
+  background-position: 70% 50%
+  &__img
+    display: block
+    margin-left: auto
+    margin-right: auto
+    +xxs
+      display: none
+
+.s-contacts
+  +md
+    padding-bottom: 0
+  &__map
+    +md
+      margin-left: rem(-15)
+      margin-right: rem(-15)

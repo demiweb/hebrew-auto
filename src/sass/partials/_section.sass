@@ -39,17 +39,20 @@
   +cover
   background-color: $c-text
   &__inner
-    // min-height: calc(100vh - #{$header-height})
     +flex(flex-start, normal, column)
-    padding-top: rem(140)
-    padding-bottom: rem(140)
+    padding-top: rem(15)
     position: relative
     z-index: 1
   &__content
+    padding-top: rem(140)
+    padding-bottom: rem(140)
     flex-grow: 1
     +flex(center, normal, column)
     position: relative
     z-index: 1
+    +sm
+      padding-top: rem(60)
+      padding-bottom: rem(75)
   &__icon
     width: 1em
     height: 1em
@@ -60,5 +63,9 @@
     margin-left: auto
     margin-right: auto
     margin-bottom: rem(15)
+    +lg
+      font-size: rem(40)
+    +sm
+      font-size: rem(35)
     .icon
-      font-size: rem(20)
+      font-size: .4em

@@ -2,14 +2,30 @@
   background-color: $gray-lightest
   border: 1px solid  $gray-light
   padding: rem(25) rem(55)
+  +md
+    padding: rem(40) rem(60)
+  +xxs
+    padding: rem(40) rem(15)
   &__fields
-    +flex(flex-start, normal, row, wrap)
+    +flex(center, normal, row, wrap)
     margin-left: rem(-5)
     margin-right: rem(-5)
   &__field
     padding-left: rem(5)
     padding-right: rem(5)
     width: 20%
+    margin-bottom: rem(10)
+    .input, .btn
+      display: block
+      max-width: 230px
+    .btn
+      margin-left: auto
+      margin-right: auto
+    +md
+      width: 50%
+    &:nth-child(odd)
+      .input
+        margin-right: auto
   &__title
     margin-bottom: rem(15)
     text-align: center

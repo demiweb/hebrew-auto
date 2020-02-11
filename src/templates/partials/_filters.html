@@ -36,7 +36,7 @@ fields = [
 %}
 
 <!-- begin filters -->
-<form class="section__block filters">
+<form class="section__block filters{% if filters.mod %} {{ filters.mod }}{% endif %}">
   <h3 class="filters__title title title--h3">פילטר</h3>
 
   <div class="filters__fields">
