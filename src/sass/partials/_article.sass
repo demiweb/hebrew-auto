@@ -1,0 +1,23 @@
+.article
+  h2
+    @extend .title
+    @extend .title--h3
+  p, ul, ol
+    +notlast
+      margin-bottom: rem(25)
+  ul
+    li
+      +list-bullet
+      &::before
+        display: inline-block
+        color: $accent
+        margin-left: .3em
+  ol
+    +counter('text', ')')
+    li
+      &::before
+        display: inline-block
+        margin-left: .3em
+  a
+    color: $blue
+    text-decoration: underline

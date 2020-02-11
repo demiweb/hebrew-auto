@@ -24,6 +24,11 @@ body
 .out
   padding-top: $header-height
 
+.main
+  &__breadcrumbs
+    padding-top: rem(20)
+    padding-bottom: rem(20)
+
 .logo
   display: inline-block
   font-size: 0
@@ -61,6 +66,7 @@ body
     z-index: 1
 
 .price-block
+  $this: &
   display: block
   &__upttl
     display: block
@@ -69,6 +75,10 @@ body
     display: block
   &__subttl
     display: block
+  &--flex
+    +flex(flex-start, baseline)
+    #{$this}__upttl, #{$this}__price
+      margin-left: rem(8)
 
 .price
   color: #fd3c00

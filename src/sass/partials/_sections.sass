@@ -41,7 +41,7 @@
   &__title
     @extend .section__title
 
-.s-member
+.s-two-cols
   position: relative
   &__left
     background-color: $gray
@@ -63,4 +63,14 @@
     background-color: $accent
     padding-top: rem(130)
     padding-bottom: rem(130)
-    
+
+.s-item
+  border-top: 1px solid $gray-lightest
+  border-bottom: 1px solid $gray-lightest
+  &__img
+    margin-top: rem(20)
+    margin-bottom: rem(20)
+  &__content
+    border-right: 1px solid $gray-lightest
+    border-left: 1px solid $gray-lightest
+    padding: rem(35)

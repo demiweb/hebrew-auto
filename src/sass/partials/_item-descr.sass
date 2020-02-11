@@ -1,0 +1,57 @@
+.item-descr
+  &__title
+    color: $blue
+    text-decoration: underline
+    font-size: em(21)
+    margin-bottom: rem(15)
+  &__price-block
+    margin-bottom: rem(12)
+  &__meta
+    max-width: 540px
+    margin-bottom: rem(10)
+  &__text
+    max-width: 565px
+    position: relative
+    padding-bottom: rem(12)
+    margin-bottom: rem(25)
+    +before
+      background-color: $gray-lightest
+      height: 1px
+      width: 100%
+      max-width: 540px
+      bottom: 0
+      right: 0
+      position: absolute
+  &__btn
+    margin-bottom: rem(25)
+
+.item-meta
+  +flex()
+  border-top: 1px solid  $gray-lightest
+  border-bottom: 1px solid  $gray-lightest
+  padding-top: rem(12)
+  padding-bottom: rem(12)
+  &__item
+    +notfirst
+      padding-right: rem(15)
+      border-right: 1px solid $gray-lightest
+    +notlast
+      padding-left: rem(15)
+
+.item-del-meta
+  +flex(flex-start, center)
+  &__item
+    color: $gray
+    +flex(flex-start, center)
+    +notfirst
+      padding-right: rem(15)
+      border-right: 1px solid currentColor
+    +notlast
+      padding-left: rem(15)
+  &__icon
+    font-size: 0
+    margin-left: rem(10)
+    .icon
+      font-size: rem(30)
+  &__text
+    // max-width: 120px

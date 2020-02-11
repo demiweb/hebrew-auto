@@ -1,0 +1,20 @@
+---
+title: one-tyre
+page: one-tyre
+breadcrumbs: {
+  list: [
+    { link: 'דף הבית' },
+    { item: '-' },
+    { link: 'צמיגי תלפיות חיפה' },
+    { item: '-' },
+    { item: 'Bridgestone 185/60R15', modItem: 'breadcrumbs__item-current' }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-item.html" %}
+  {% include "partials/sections/_s-slider-items.html" %}
+  {% include "partials/sections/_s-call.html" %}
+{% endblock %}

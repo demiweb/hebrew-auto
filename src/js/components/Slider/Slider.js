@@ -40,7 +40,7 @@ export default class Slider {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
       },
-      team: {
+      items: {
         slidesPerView: 4,
         grabCursor: true,
         spaceBetween: 30,

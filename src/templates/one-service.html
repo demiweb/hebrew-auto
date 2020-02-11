@@ -1,0 +1,29 @@
+---
+title: one-service
+page: one-service
+breadcrumbs: {
+  list: [
+    { link: 'דף הבית' },
+    { item: '-' },
+    { link: 'תיקוני פחחות וצבע' },
+    { item: '-' },
+    { item: 'תיקוני צבע לרכב', modItem: 'breadcrumbs__item-current' }
+  ]
+}
+sTwoCols: {
+  text: 'חלק גדול מהרושם שעושה רכב, קשור לצבע שלו. לא משנה אם רכבך לבן, שחור, או אדום, הצבע שלו יהיה זה שיעשה את הרושם הראשוני, כאשר תציע אותו למכירה. שמש חזקה בימי הקיץ, ענפים מתעופפים בסערה, אבן תועה הניתזת מגלגל של רכב חולף, נראה כי כל איתני הטבע חוברים כדי לפגום בשלמות הצבע של רכבך. לכן, בנוסף לתחזוקה השוטפת של צבע הרכב, יש להקפיד על טיפול בצבע של הרכב מוקדם ככל האפשר. אם המדובר בשריטה או שפשוף מקומי, צביעת הגג ומכסה המנוע (כתוצאה מדהייה בשמש) או צביעה כוללת של הרכב (בצבע מטאלי, בצבע תלת שכבתי או בצבע פנינה) – הצבעים האומנים של מוסך תלפיות, יעמדו לרשותך ביעוץ והכוונה ובצביעה מקומית, חלקית או כוללת של רכבך.',
+  title: 'על שירות',
+  img: 'stock-photo-painting-a-car-410974558.jpg'
+}
+sFeatures: {
+  mod: 'pb-0'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-member.html" %}
+  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-service-gallery.html" %}
+  {% include "partials/sections/_s-call.html" %}
+{% endblock %}
