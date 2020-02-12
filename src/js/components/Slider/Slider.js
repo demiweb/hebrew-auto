@@ -31,7 +31,7 @@ export default class Slider {
         },
       },
       thumbs: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         on: {
           init: onInit,
         },
@@ -39,14 +39,36 @@ export default class Slider {
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        breakpoints: {
+          576: {
+            slidesPerView: 4,
+          },
+        },
       },
       items: {
-        slidesPerView: 4,
+        slidesPerView: 1,
         grabCursor: true,
-        spaceBetween: 30,
+        spaceBetween: 10,
         navigation,
         on: {
           init: onInit,
+        },
+        breakpoints: {
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 2,
+          },
         },
       },
     })

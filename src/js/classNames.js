@@ -24,4 +24,5 @@ export default {
   select: {
     el: 'js-select',
   },
+  lightgallery: 'js-lightgallery',
 }

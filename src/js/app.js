@@ -13,10 +13,12 @@ import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
 import setScrollbar from './components/setScrollbar'
 import setSelects from './components/Select/Select'
+import setGallery from './components/setGallery'
 
 import Slider from './components/Slider/Slider'
+import Menu from './components/Menu/Menu'
 
-// import { NO_SCROLL } from './constants'
+import { NO_SCROLL } from './constants'
 
 class App {
   constructor() {
@@ -28,24 +30,24 @@ class App {
 
     this.slider = new Slider(`.${classNames.slider.container}`)
 
-    // this.state = {
-    //   hasMenuOpen: false,
-    // }
+    this.state = {
+      hasMenuOpen: false,
+    }
 
-    // this.menu = new Menu({
-    //   classNames: {
-    //     btn: 'burger',
-    //     menu: 'header__nav',
-    //   },
-    // })
+    this.menu = new Menu({
+      classNames: {
+        btn: 'burger',
+        menu: 'header__nav-wrap',
+      },
+    })
   }
 
-  // updateState(state) {
-  //   this.state = {
-  //     ...this.state,
-  //     ...state,
-  //   }
-  // }
+  updateState(state) {
+    this.state = {
+      ...this.state,
+      ...state,
+    }
+  }
 
   initMethods() {
     this.methods = {
@@ -54,6 +56,7 @@ class App {
       setLazy,
       setScrollbar,
       setSelects,
+      setGallery,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
@@ -64,39 +67,39 @@ class App {
 
     this.slider.init()
 
-    // this.menu.init()
-    // this.menu.onToggle = this.onMenuToggle.bind(this)
-    // this.menu.onClose = this.onMenuClose.bind(this)
+    this.menu.init()
+    this.menu.onToggle = this.onMenuToggle.bind(this)
+    this.menu.onClose = this.onMenuClose.bind(this)
   }
 
-  // onMenuToggle() {
-  //   let { hasMenuOpen } = { ...this.state }
-  //   hasMenuOpen = !hasMenuOpen
-  //   this.updateState({ hasMenuOpen })
+  onMenuToggle() {
+    let { hasMenuOpen } = { ...this.state }
+    hasMenuOpen = !hasMenuOpen
+    this.updateState({ hasMenuOpen })
 
-  //   App.toggleScroll(this, this.state.hasMenuOpen)
-  // }
+    App.toggleScroll(this, this.state.hasMenuOpen)
+  }
 
-  // onMenuClose() {
-  //   this.updateState({ hasMenuOpen: false })
-  //   App.toggleScroll(this, this.state.hasMenuOpen)
-  // }
+  onMenuClose() {
+    this.updateState({ hasMenuOpen: false })
+    App.toggleScroll(this, this.state.hasMenuOpen)
+  }
 
-  // static preventScroll(app) {
-  //   app.dom.body.classList.add(NO_SCROLL)
-  // }
+  static preventScroll(app) {
+    app.dom.body.classList.add(NO_SCROLL)
+  }
 
-  // static allowScroll(app) {
-  //   app.dom.body.classList.remove(NO_SCROLL)
-  // }
+  static allowScroll(app) {
+    app.dom.body.classList.remove(NO_SCROLL)
+  }
 
-  // static toggleScroll(app, condition) {
-  //   if (condition) {
-  //     App.preventScroll(app)
-  //   } else {
-  //     App.allowScroll(app)
-  //   }
-  // }
+  static toggleScroll(app, condition) {
+    if (condition) {
+      App.preventScroll(app)
+    } else {
+      App.allowScroll(app)
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -25,6 +25,23 @@ body
   padding-top: $header-height
   +lg
     padding-top: $header-height-lg
+  &__call
+    position: fixed
+    z-index: 10
+    bottom: rem(20)
+    left: rem(20)    
+    +lgmin
+      display: none
+
+.call
+  background-color: $accent
+  height: 1em
+  width: 1em
+  font-size: rem(80)
+  border-radius: 50%
+  +flex(center, center)
+  .icon
+    font-size: rem(42)
 
 .main
   &__breadcrumbs

@@ -35,11 +35,15 @@
       right: 0
       left: 0
       +hidden
+      +ready
+        +tr(opacity .3s, visibility .3s)
       +before
         +arr(1em, .5em, currentColor, t)
         position: absolute
         bottom: 100%
         right: rem(25)
+      &--open
+        +visible
   &__contacts
     +flex(flex-start, center)
     flex-grow: 1
@@ -54,6 +58,9 @@
       +lg
         margin-left: 0
         margin-bottom: rem(25)
+    &--hidden-mob
+      +lg
+        display: none !important
   &__social
     +flex(flex-start, center)
     margin-left: rem(15)
