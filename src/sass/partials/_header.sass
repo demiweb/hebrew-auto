@@ -89,11 +89,13 @@
 
 
 .header-contact
+  $this: &
   +flex(flex-start, center)
   position: relative  
   +lg
-    display: block
-    padding-right: rem(37)
+    &:not(#{$this}--content)
+      display: block
+      padding-right: rem(37)
   &__text
     +notlast
       margin-left: em(10)
@@ -102,6 +104,9 @@
         display: none
   &__link
     font-weight: 400
+    +tr(color .3s)
+    +hover
+      color: $accent
   &__icon    
     background-color: $accent
     width: rem(27)
@@ -117,6 +122,14 @@
       position: absolute
       right: 0
       top: -.15rem
+
+  &--content
+    #{$this}__icon
+      +lg
+        position: static
+    #{$this}__text
+      &--front
+        display: block
 
 .burger 
   $this: &

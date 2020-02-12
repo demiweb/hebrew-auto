@@ -1,0 +1,43 @@
+{%set
+form = {
+  title: 'להזמנת טיפול',
+  mod: 's-form__form form--section',
+  subttl: 'אנא השאר את פר טי הקשר שלך ונחזור אליך בקרוב',
+  phone: true,
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'שם'
+    },
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'טלפון'
+    },
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'דואר אלקטרוני'
+    }
+  ]
+}
+%}
+
+<!-- begin s-form -->
+<section class="s-form">
+  <div class="s-form__left">
+    <img class="js-lazy" alt="" src="" data-src="./img/2.png"/>
+  </div>
+
+  <div class="s-form__right">
+    <div class="container">
+      <div class="grid">
+        <div class="col col--lg-4 col--md-6">
+          {% include "partials/_form.html" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end s-form -->

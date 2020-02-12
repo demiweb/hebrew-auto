@@ -43,6 +43,44 @@
   </div>
   <!-- end hero-slider -->
 
+  {% elseif hero.sliderFuckingDifferent %}
+
+  <!-- begin hero-slider -->
+  <div class="hero-slider hero-slider--center-white slider__wrap slider--hero__wrap">
+    <div class="swiper-container js-slider" data-slider="hero">
+      <div class="swiper-wrapper slider">
+        {% for i in range(0, 5) %}
+        <div class="swiper-slide hero-slide js-lazy" data-background-image="./img/hero/renault.jpg">
+          <div class="container">
+            <div class="hero-slide__inner">
+              <h2 class="hero-slide__title title">
+                רכבי דאצ’יה - טיפולים תקופתיים
+              </h2>
+
+              <div class="hero-slide__subttl">
+                שירותי מוסך תלפיות הם מהמתקדמים בעולם, <br>
+                ויבטיחו את שימור הרכב שלכם לאורך זמן
+              </div>
+
+              {{ mixins.btn(
+                title = 'צרו קשר',
+                mod = 'hero-slde__btn btn--dark-text'
+              ) }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="slider__pagination js-slider-pagination"></div>
+    <div class="slider__controls">
+      <button class="slider__prev slider-prev js-slider-prev"></button>
+      <button class="slider__next slider-next js-slider-next"></button>
+    </div>
+  </div>
+  <!-- end hero-slider -->
+
   {% else %}
     <div class="container">
       {% if hero.breadcrumbs %}

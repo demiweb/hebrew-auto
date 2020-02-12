@@ -33,17 +33,7 @@ features = [
     <div class="grid">
       {% for i in features %}
       <div class="col col--md-3 col--xs-6">
-        <!-- begin feature -->
-        <div class="feature">
-          <div class="feature__icon">
-            {{ mixins.icon(i.icon) }}
-          </div>
-
-          <h3 class="feature__title title title--h3">{{ i.title | safe }}</h3>
-
-          <div class="feature__text">{{ i.text | safe }}</div>
-        </div>
-        <!-- end feature -->
+        {% include "partials/_feature.html" %}
       </div>
       {% endfor %}
     </div>    

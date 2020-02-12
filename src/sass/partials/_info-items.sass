@@ -1,4 +1,5 @@
 .info-item
+  $this: &
   text-align: center
   +flex(flex-start, normal, column)
   height: 100%
@@ -18,9 +19,27 @@
     margin-bottom: rem(15)
     .icon
       font-size: rem(34)
-
   &__text
     display: inline-block
     border-bottom: 1px solid  $accent
     padding-bottom: rem(8)
     flex-grow: 1
+  &__title
+    margin-bottom: rem(10)
+
+  &--reverse
+    max-width: none
+    margin-left: 0
+    margin-right: 0
+    #{$this}__text
+      border-bottom: 0
+      position: relative
+      padding-top: rem(10)
+      +before
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, 0)
+        background-color: $accent
+        height: 1px
+        width: rem(260)

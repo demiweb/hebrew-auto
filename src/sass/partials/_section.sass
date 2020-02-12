@@ -1,14 +1,14 @@
 .section
+  $this: &
   padding-top: rem(95)
   padding-bottom: rem(95)
   +lg
     padding-top: rem(70)
     padding-bottom: rem(70)
-  &__title
-    text-align: center
+  &__title    
     margin-bottom: rem(30)
-    +md
-      // margin-bottom: rem(15)
+    &:not(#{$this}__title--side)
+      text-align: center
     &--short
       max-width: 810px
       margin-left: auto

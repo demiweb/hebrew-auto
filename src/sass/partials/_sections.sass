@@ -7,8 +7,6 @@
     +flex(flex-end, center, column)
     +lg
       display: none
-  &__items
-    // margin-bottom: rem(30)
   &__item
     +xs
       margin-bottom: rem(15)
@@ -133,10 +131,18 @@
   &__img
     margin-top: rem(20)
     margin-bottom: rem(20)
+    +md
+      display: none
   &__content
     border-right: 1px solid $gray-lightest
     border-left: 1px solid $gray-lightest
     padding: rem(35)
+    +lg
+      padding: rem(35) rem(15)
+    +md
+      border: 0
+      padding-left: 0
+      padding-right: 0
 
 .s-tyres
   +md
@@ -168,3 +174,57 @@
     +md
       margin-left: rem(-15)
       margin-right: rem(-15)
+
+.s-form
+  position: relative
+  &__left
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    width: percentage(1200 / 1920)
+    +flex(center, normmal, column)
+    +lg
+      width: 50%
+    +md
+      position: static
+      width: 100%
+  &__right
+    padding-top: rem(170)
+    padding-bottom: rem(170)
+    +md
+      padding-top: rem(30)
+      padding-bottom: rem(75)
+  &__form
+    +md
+      max-width: 450px
+      margin-left: auto
+      margin-right: auto
+
+.s-some-info
+  color: $white
+  background-color: #545454
+  +cover
+  background-position: 60% 100%
+  +md
+    background-position: 45% 100%
+  +sm
+    background-size: 200%
+  +xxs
+    background-size: 250%
+  +r(374)
+    background-image: none !important
+  &__left
+    height: 100%
+    +flex(flex-start, flex-end)
+    +sm
+      padding-top: rem(200)
+    +xxs
+      padding-top: rem(100)
+    +r(374)
+      padding-top: 0
+
+.s-car-list
+  +md
+    background-color: $gray-lightest
+

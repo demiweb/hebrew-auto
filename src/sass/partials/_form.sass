@@ -1,6 +1,26 @@
 .form
+  $this: &
   &__field
     +notlast
       margin-bottom: rem(10)
   &__btn
     margin-top: rem(20)
+  &__title
+    margin-bottom: rem(15)
+  &__subttl
+    margin-bottom: rem(30)
+  &__fields    
+    +notlast
+      margin-bottom: rem(30)
+
+  &--section
+    text-align: center
+    background-color: $white
+    box-shadow: 0px 4px 9.9px 0.1px rgba(0, 0, 0, 0.13)
+    padding: rem(50) rem(70)
+    +lg
+      padding: rem(50) rem(25)
+    #{$this}__fields
+      max-width: 230px
+      margin-left: auto
+      margin-right: auto

@@ -1,4 +1,15 @@
 .item-descr
+  &__top
+    +md
+      +flex(flex-start, center)
+      padding-bottom: rem(8)
+  &__img
+    width: 120px
+    margin-left: rem(20)
+    +mdmin
+      display: none
+    +xxs
+      width: 80px
   &__title
     color: $blue
     text-decoration: underline
@@ -6,9 +17,15 @@
     margin-bottom: rem(15)
   &__price-block
     margin-bottom: rem(12)
+  &__meta, &__text
+    +md
+      margin-left: rem(-15)
+      margin-right: rem(-15)
+      padding-left: rem(15)
+      padding-right: rem(15)
   &__meta
     max-width: 540px
-    margin-bottom: rem(10)
+    margin-bottom: rem(10)    
   &__text
     max-width: 565px
     position: relative
@@ -39,15 +56,29 @@
       padding-left: rem(15)
 
 .item-del-meta
+  --padding: #{rem(15)}
   +flex(flex-start, center)
+  +lg
+    --padding: #{rem(10)}
+  +sm
+    font-size: em(14)
+  +xxs
+    display: block
   &__item
     color: $gray
     +flex(flex-start, center)
     +notfirst
       padding-right: rem(15)
+      padding-right: var(--padding)
       border-right: 1px solid currentColor
     +notlast
       padding-left: rem(15)
+      padding-left: var(--padding)
+    +xxs
+      border-right: 0 !important
+      padding-left: 0 !important
+      padding-right: 0 !important
+      margin-bottom: rem(10)
   &__icon
     font-size: 0
     margin-left: rem(10)

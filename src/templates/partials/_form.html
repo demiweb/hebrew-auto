@@ -1,26 +1,48 @@
-
-
 <!-- begin form -->
 <form class="form{% if form.mod %} {{ form.mod }}{% endif %}">
-  {% for i in form.fields %}
-  <div class="form__field">
-    {{ mixins.input(
-      name = i.name,
-      mod = '',
-      type = i.type,
-      placeholder = i.placeholder,
-      value = '',
-      fieldClass = ''
-    ) }}
-  </div>
-  {% endfor %}
+  {% if form.title %}
+    <h2 class="form__title title title--h2">{{ form.title | safe }}</h2>
+  {% endif %}
 
-  <div class="form__field form__btn">
-    {{ mixins.btn(
-      title = 'צרו קשר',
-      mod = '',
-      href = false
-    ) }}
+  {% if form.subttl %}
+    <div class="form__subttl">{{ form.subttl | safe }}</div>
+  {% endif %}
+
+  <div class="form__fields">
+
+    {% for i in form.fields %}
+    <div class="form__field">
+      {{ mixins.input(
+        name = i.name,
+        mod = i.mod,
+        type = i.type,
+        placeholder = i.placeholder,
+        value = '',
+        fieldClass = ''
+      ) }}
+    </div>
+    {% endfor %}
+
+    <div class="form__field form__btn">
+      {{ mixins.btn(
+        title = 'צרו קשר',
+        mod = '',
+        href = false
+      ) }}
+    </div>
+
   </div>
+
+  {% if form.phone %}
+  <div class="form__phone phone-label">
+    <div class="form__contact header-contact header-contact--content phone-label__inner">
+      <div class="header-contact__text header-contact__text--front">
+        צרו קשר:
+      </div>
+      <div class="header-contact__icon">{{ mixins.icon('telephone') }}</div>
+      <a href="tel:0779555648" class="header-contact__link">077-9555648</a>
+    </div>
+  </div>
+  {% endif %}
 </form>
 <!-- end form -->
