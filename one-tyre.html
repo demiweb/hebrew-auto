@@ -199,18 +199,23 @@
         <section class="s-item">
           <div class="container">
             <div class="grid grid--align-items-center">
-              <div class="col col--6 text-center">
+              <div class="col col--md-6 text-center">
                 <img class="s-item__img js-lazy" alt="" src="" data-src="./img/tyre-lg.png" />
               </div>
-              <div class="col col--6">
+              <div class="col col--md-6">
                 <div class="s-item__content">
                   <!-- begin item-descr -->
                   <div class="item-descr">
-                    <h2 class="item-descr__title">Bridgestone 185/60R15</h2>
-                    <div class="item-descr__price-block price-block price-block--flex">
-                      <div class="price-block__title">מחיר:</div>
-                      <div class="price-block__price price">₪359</div>
-                      <div class="price-block__price-old price price--old">₪459</div>
+                    <div class="item-descr__top">
+                      <img class="item-descr__img js-lazy" alt="" src="about:blank" data-src="./img/tyre.png" />
+                      <div class="item-descr__top-title">
+                        <h2 class="item-descr__title">Bridgestone 185/60R15</h2>
+                        <div class="item-descr__price-block price-block price-block--flex">
+                          <div class="price-block__title">מחיר:</div>
+                          <div class="price-block__price price">₪359</div>
+                          <div class="price-block__price-old price price--old">₪459</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="item-descr__meta item-meta">
                       <div class="item-meta__item"> רוחב הצמיג: <strong>205</strong>
@@ -478,7 +483,7 @@
         </section>
         <!-- end section -->
         <!-- begin section -->
-        <div class="s-call js-lazy" data-background-image="./img/bg-call.jpg">
+        <section class="s-call js-lazy" data-background-image="./img/bg-call.jpg">
           <div class="container">
             <div class="grid grid--no-bottom-gap-all">
               <div class="col col--lg-6">
@@ -487,29 +492,31 @@
                   <div class="section__subttl">אנא השאר את פר טי הקשר שלך ונחזור אליך בקרוב</div>
                   <!-- begin form -->
                   <form class="form s-call__form">
-                    <div class="form__field">
-                      <!-- begin input -->
-                      <div class="input">
-                        <input type="text" placeholder="שם">
+                    <div class="form__fields">
+                      <div class="form__field">
+                        <!-- begin input -->
+                        <div class="input input--dark">
+                          <input type="text" placeholder="שם">
+                        </div>
+                        <!-- end input -->
                       </div>
-                      <!-- end input -->
-                    </div>
-                    <div class="form__field">
-                      <!-- begin input -->
-                      <div class="input">
-                        <input type="text" placeholder="טלפון">
+                      <div class="form__field">
+                        <!-- begin input -->
+                        <div class="input input--dark">
+                          <input type="text" placeholder="טלפון">
+                        </div>
+                        <!-- end input -->
                       </div>
-                      <!-- end input -->
-                    </div>
-                    <div class="form__field">
-                      <!-- begin input -->
-                      <div class="input">
-                        <input type="text" placeholder="דואר אלקטרוני">
+                      <div class="form__field">
+                        <!-- begin input -->
+                        <div class="input input--dark">
+                          <input type="text" placeholder="דואר אלקטרוני">
+                        </div>
+                        <!-- end input -->
                       </div>
-                      <!-- end input -->
-                    </div>
-                    <div class="form__field form__btn">
-                      <button class="btn">צרו קשר</button>
+                      <div class="form__field form__btn">
+                        <button class="btn">צרו קשר</button>
+                      </div>
                     </div>
                   </form>
                   <!-- end form -->
@@ -520,7 +527,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- end section -->
       </main>
       <!-- end main -->
