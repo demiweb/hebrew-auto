@@ -1,0 +1,48 @@
+{% from 'mixins/_btn.html' import btn %}
+{% set btn = btn %}
+
+{% macro heroSlide(mod, bg, video, title, subttl, button, fuckingDifferent) %}
+
+<!-- begin hero-slide -->
+<div class="swiper-slide hero-slide" >
+  <div class="hero-slide__bg{% if bg %} js-lazy{% endif %}" {% if bg %}data-background-image="./img/hero/{{ bg }}"{% endif %}>
+    {% if video %}
+    <video class="js-lazy" src="" autoplay="" muted="" loop="" playsinline="" data-src="./video/test-drive.mp4"></video>
+    {% endif %}
+  </div>
+
+  <div class="container">
+    <div class="hero-slide__inner">
+      {% if fuckingDifferent %}
+
+        <h2 class="hero-slide__title title">{{ title | safe }}</h2>
+        
+        <div class="hero-slide__subttl">{{ subttl | safe }}</div>
+
+        {{ btn(
+          title = button.title,
+          mod = button.mod
+        ) }}
+
+
+      {% else %}
+
+        <div class="grid">
+          <div class="col col--lg-4 col--sm-5 col--xs-6 col--xxs-8 col--offset-xxs-1">
+            <h2 class="hero-slide__title title">{{ title | safe }}</h2>
+
+            <div class="hero-slide__subttl">{{ subttl | safe }}</div>
+
+            {{ btn(
+              title = button.title,
+              mod = button.mod
+            ) }}
+          </div>
+        </div>
+
+      {% endif %}
+    </div>
+  </div>
+</div>
+<!-- end hero-slide -->
+{% endmacro %}

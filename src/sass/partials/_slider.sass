@@ -13,7 +13,7 @@
   +hover
     color: $accent
 
-.slider-next
+.slider-prev
   transform: scaleX(-1)
 
 .slider
@@ -33,11 +33,15 @@
     position: absolute
     top: 50%
     transform: translate(0, -50%)
+    &.swiper-button-disabled
+      opacity: .5
+      pointer-events: none
   &__prev
-    left: rem(15)
-  &__next
     right: rem(15)
     transform: translate(0, -50%) scaleX(-1)
+  &__next
+    left: rem(15)
+    
   &__pagination
     text-align: center
     position: absolute
@@ -70,9 +74,9 @@
     &__wrap
       .slider
         &__prev
-          left: rem(20)
-        &__next
           right: rem(20)
+        &__next
+          left: rem(20)
 
   &--items
     &__wrap
@@ -87,6 +91,6 @@
         &__prev, &__next
           margin-left: rem(15)
           margin-right: rem(15)
-        &__next
+        &__prev
           transform: scaleX(-1)
           

@@ -25,6 +25,7 @@
   &__nav
     flex-grow: 1
   &__nav-wrap
+    flex-grow: 1
     +lg
       position: absolute
       z-index: 10
@@ -37,11 +38,7 @@
       +hidden
       +ready
         +tr(opacity .3s, visibility .3s)
-      +before
-        +arr(1em, .5em, currentColor, t)
-        position: absolute
-        bottom: 100%
-        right: rem(25)
+      
       &--open
         +visible
   &__contacts
@@ -73,10 +70,12 @@
     font-size: 0
     +lg
       margin-left: rem(15)
-    img
-      display: inline-block
-      margin-left: rem(7)
-      margin-right: rem(7)
+      
+  &__logo-sm
+    display: inline-block
+    vertical-align: middle
+    +notlast
+      margin-left: rem(14)
   &__logo
     margin-right: rem(25)
     +lg
@@ -89,6 +88,9 @@
   &__img
     +lg
       width: 42px
+  &__img-link
+    font-size: 0
+    display: inline-block
   &__meta-mob
     padding: rem(15)
     +lgmin
@@ -162,3 +164,11 @@
       top: 0
     &::before
       bottom: 0
+  &--active
+    +before
+      +arr(1.4em, .7em, currentColor, t)
+      position: absolute
+      z-index: 2
+      top: 100%
+      left: 50%
+      transform: translate(-50%, rem(6))

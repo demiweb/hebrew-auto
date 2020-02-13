@@ -1,5 +1,6 @@
 .descr-card
-  +flex(flex-start, normal, column)
+  display: flex
+  flex-direction: column
   text-align: center
   border: 1px solid  $gray-light
   height: 100%
@@ -11,7 +12,8 @@
     margin-bottom: rem(15)
   &__content
     flex-grow: 1
-    +flex(flex-start, normal, column)
+    display: flex
+    flex-direction: column
     padding: rem(25) rem(20)
   &__text
     flex-grow: 1

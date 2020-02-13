@@ -14,6 +14,7 @@ export default class Slider {
       hero: {
         slidesPerView: 1,
         grabCursor: true,
+        effect: 'fade',
         navigation,
         pagination: {
           el: pagination,
