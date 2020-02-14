@@ -553,7 +553,7 @@
                 </a>
                 <div class="footer__copy">© Copyright - מרכז שירות תלפיות 1936 </div>
                 <div class="footer__btn">
-                  <a href="#" class="btn">לקביעת תור</a>
+                  <button class="btn js-popup-open" data-popup-target="call">לקביעת תור</button>
                 </div>
               </div>
             </div>
@@ -570,6 +570,45 @@
         </svg>
         <!-- end icon-telephone -->
       </a>
+      <!-- begin popup -->
+      <div class="popup js-popup" data-popup="call">
+        <div class="popup__inner">
+          <button class="popup__close close js-popup-close"></button>
+          <!-- begin form -->
+          <form class="form popup__form">
+            <h2 class="form__title title title--h2">במה נוכל לעזור לך היום?</h2>
+            <div class="form__subttl">אנא השאר את פר טי הקשר שלך ונחזור אליך בקרוב</div>
+            <div class="form__fields">
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="שם">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="טלפון">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="דואר אלקטרוני">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field form__btn">
+                <button class="btn">צרו קשר</button>
+              </div>
+            </div>
+          </form>
+          <!-- end form -->
+        </div>
+      </div>
+      <!-- end popup -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
