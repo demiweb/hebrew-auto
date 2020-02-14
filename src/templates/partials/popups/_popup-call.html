@@ -1,0 +1,34 @@
+{%set
+form = {
+  title: 'במה נוכל לעזור לך היום?',
+  subttl: 'אנא השאר את פר טי הקשר שלך ונחזור אליך בקרוב',
+  mod: 'popup__form',
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'שם'
+    },
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'טלפון'
+    },
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'דואר אלקטרוני'
+    }
+  ]
+}
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="call">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+
+    {% include "partials/_form.html" %}
+  </div>
+</div>
+<!-- end popup -->

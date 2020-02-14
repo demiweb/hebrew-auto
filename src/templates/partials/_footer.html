@@ -45,8 +45,6 @@ navs = [
 <!-- begin footer -->
 <footer class="footer">
   <div class="container">
-    
-
     <div class="grid grid--no-bottom-gap-all">
       {% for i in navs %}
       <div class="col col--lg-2 col--sm-3 col--6">
@@ -74,7 +72,9 @@ navs = [
           <div class="footer__btn">
             {{ mixins.btn(
               title = 'לקביעת תור',
-              mod = ''
+              mod = 'js-popup-open',
+              href = false,
+              attributes = { 'data-popup-target': 'call' }
             ) }}
           </div>
         </div>

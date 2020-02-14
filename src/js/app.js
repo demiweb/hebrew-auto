@@ -6,6 +6,8 @@ import 'core-js/features/object/values'
 import 'intersection-observer'
 import './lib/polyfill'
 
+import Popup from 'popup-simple'
+
 import classNames from './classNames'
 
 // import sayHello from './lib/sayHello'
@@ -29,6 +31,7 @@ class App {
     }
 
     this.slider = new Slider(`.${classNames.slider.container}`)
+    this.popup = new Popup()
 
     this.state = {
       hasMenuOpen: false,
@@ -66,6 +69,7 @@ class App {
     this.initMethods()
 
     this.slider.init()
+    this.popup.init()
 
     this.menu.init()
     this.menu.onToggle = this.onMenuToggle.bind(this)

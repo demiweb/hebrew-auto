@@ -7143,6 +7143,11 @@ pngjs@^3.3.3:
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.4.0.tgz#99ca7d725965fb655814eaf65f38f12bbdbf555f"
   integrity sha512-NCrCHhWmnQklfH4MtJMRjZ2a8c80qXeMlQMv2uVp9ISJMTt562SbGd6n2oq0PaPgKm7Z6pL9E2UlLIhC+SHL3w==
 
+popup-simple@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/popup-simple/-/popup-simple-1.0.5.tgz#65795e5aa91aafc333d989874e292aa2659d05ea"
+  integrity sha512-BkSFP24OkD7od34U8L0ckxZvbLZy2szYD9oBJ4J5N/ZynN0Q24pusn1kcjxiOfic+5fdzXisIe9KWancJgKLFw==
+
 portscanner@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/portscanner/-/portscanner-2.1.1.tgz#eabb409e4de24950f5a2a516d35ae769343fbb96"
