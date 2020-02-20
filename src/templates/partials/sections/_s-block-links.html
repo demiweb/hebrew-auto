@@ -1,0 +1,36 @@
+{%set
+blocks = [
+  { title: 'הנעה באמצעות כבלים', img: '13.jpg' },
+  { title: 'מילוי אוויר בגלגלים', img: '12.jpg' },
+  { title: 'החלפת גלגל', img: '11.jpg' },
+  { title: 'בדיקת נוזל המצבר', img: '16.jpg' },
+  { title: 'החלפת נורה בפנס קידמי', img: '15.jpg' },
+  { title: 'הוספת שמן מנוע', img: '14.jpg' },
+  { title: 'החלפת מגבים ', img: '17.jpg' }
+]
+%}
+
+<!-- begin section -->
+<section class="section pb-0">
+  <div class="container">
+    <div class="grid grid--justify-content-center">
+      {% for i in blocks %}
+      <div class="col col--md-4 col--xs-6">
+        <!-- begin block-links -->
+        <div class="block-links">
+          <a href="#" class="block-links__link">
+            <img class="block-links__img js-lazy" alt="" src="" data-src="./img/blocks-imgs/{{ i.img }}"/>
+            <span class="block-links__title title title--h3">{{ i.title | safe }}</span>
+          </a>
+          {{ mixins.btn(
+            title = 'שעון',
+            mod = 'block-links__btn'
+          ) }}
+        </div>
+        <!-- end block-links -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->
