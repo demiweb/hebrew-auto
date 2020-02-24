@@ -9,6 +9,12 @@
     +tr(border-color .3s)
     &:focus
       border-color: $accent
+  &--dark
+    color: $white
+    #{$text-inputs}
+      +placeholder
+        color: inherit
+
 
 .custom-select
   $this: &
