@@ -37,12 +37,21 @@
 .hero
   $this: &
   +cover
+  position: relative
+  +before
+    +coverdiv
+    background-color: rgba($black, .4)
+    z-index: 0
   &__breadcrumbs
     margin-bottom: rem(75)
+    position: relative
+    z-index: 1
     +xs
       margin-bottom: rem(60)
   &__title
     text-align: center
+    position: relative
+    z-index: 1
   &--sm
     color: $white
     padding-top: rem(15)

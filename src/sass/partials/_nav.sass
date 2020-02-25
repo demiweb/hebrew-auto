@@ -17,7 +17,8 @@
       +lg
         margin-left: 0
     > ul
-      background-color: #2e2e2e      
+      background-color: #2e2e2e
+      color: $white 
       margin-top: .7rem
       margin-bottom: -.7rem
       margin-left: rem(-25)
@@ -29,6 +30,7 @@
       border-top: 0
       +lgmin
         +hidden
+        color: $c-text 
         position: absolute
         z-index: 5
         background-color: $gray-light
@@ -68,6 +70,9 @@
       margin-left: .3em
       position: relative
       top: -.15em
+    &:hover
+      +before
+        +arr(.5em, .25em, currentColor, t)
 
   &--footer
     +lg

@@ -2,6 +2,9 @@
   h2
     @extend .title
     @extend .title--h3
+  h3
+    @extend .title
+    @extend .title--h5
   p, ul, ol
     +notlast
       margin-bottom: rem(25)
@@ -22,3 +25,4 @@
     &:not(.btn)
       color: $blue
       text-decoration: underline
+      
